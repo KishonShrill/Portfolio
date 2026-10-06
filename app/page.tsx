@@ -63,10 +63,10 @@ export default function Home() {
                 <div className="border-t-system bg-accent-mustard text-charcoal font-meta text-xs uppercase py-1 overflow-hidden">
                     <div className="ticker-container w-full">
                         <div className="animate-marquee ticker-content">
-              /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE{" "}
+                            /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE{" "}
                         </div>
                         <div className="animate-marquee ticker-content" aria-hidden="true">
-              /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE{" "}
+                            /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE{" "}
                         </div>
                     </div>
                 </div>
@@ -74,14 +74,14 @@ export default function Home() {
 
             <main className="flex-grow pt-[104px] pb-24 px-4 sm:px-8">
                 {/* Hero Section */}
-                <section className="min-h-[85vh] relative flex flex-col justify-center py-12">
+                <section className="lg:max-h-[calc(100dvh-123px)] relative flex flex-col justify-center py-8 lg:pb-12 lg:pt-16">
                     {/* Background Graphic Elements */}
                     <div className="absolute top-10 right-10 w-32 h-32 border-system rounded-full opacity-20 pointer-events-none" />
 
-                    <div className="max-h-[80vh] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <div className="h-full w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
                         {/* Left: Massive Typography */}
-                        <div className="col-span-1 lg:col-span-7 flex flex-col items-start relative crosshair-tl crosshair-br p-4 sm:p-0">
-                            <div className="font-meta text-sm uppercase border-system px-3 py-1 mb-6 inline-flex items-center gap-2 bg-cream shadow-solid">
+                        <div className="h-full col-span-1 lg:col-span-7 flex flex-col items-start relative crosshair-tl crosshair-br p-4 sm:p-0">
+                            <div className="font-meta text-sm uppercase border-system px-3 py-1 mb-4 lg:mb-6 inline-flex items-center gap-2 bg-cream shadow-solid">
                                 <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 0C12 6.62742 6.62742 12 0 12C6.62742 12 12 17.3726 12 24C12 17.3726 17.3726 12 24 12C17.3726 12 12 6.62742 12 0Z" />
                                 </svg>
@@ -89,12 +89,12 @@ export default function Home() {
                             </div>
 
                             {/* Hero Text */}
-                            <h1 className="font-display text-[15vw] sm:text-[12vw] lg:text-[10vw] leading-solid tracking-tighter uppercase flex flex-col">
+                            <h1 className="text-black z-30 font-display text-[clamp(2.75rem,8.5vw,5.5rem)] lg:text-[clamp(3.5rem,5.8vw,6.5rem)] xl:text-[clamp(4.5rem,5.6vw,7.5rem)] leading-solid tracking-tighter uppercase flex flex-col">
                                 <span className="reveal-clip">URBAN</span>
                                 <span className="reveal-clip delay-100 flex items-center">
                                     SYNTH
                                     <svg
-                                        className="w-[8vw] h-[8vw] ml-4 text-accent-red animate-spin-slow inline-block"
+                                        className="w-[0.8em] h-[0.8em] ml-4 text-accent-red animate-spin-slow inline-block shrink-0"
                                         viewBox="0 0 24 24"
                                         fill="currentColor"
                                     >
@@ -104,11 +104,11 @@ export default function Home() {
                                 <span className="reveal-clip delay-200">CARTEL</span>
                             </h1>
 
-                            <div>
-                                <div className="font-meta text-accent-blue opacity-50 text-sm pointer-events-none">
+                            <div className="w-full mt-auto">
+                                <div className="mt-4 font-meta text-accent-blue opacity-50 text-sm pointer-events-none">
                                     [ SECTION // 00 ]
                                 </div>
-                                <div className="mt-8 max-w-lg w-full border-t-system pt-4 reveal-up delay-300">
+                                <div className="mt-4 max-w-lg w-full border-t-system pt-4 reveal-up delay-300">
                                     <div className="grid grid-cols-2 gap-4">
                                         <div>
                                             <p className="font-meta text-xs text-gray-500 uppercase">Input Node</p>
@@ -124,46 +124,48 @@ export default function Home() {
                         </div>
 
                         {/* Right: Editorial Image */}
-                        <div className="col-span-1 lg:col-span-5 relative reveal-up delay-200 mt-12 lg:mt-0">
-                            {/* Decorative Brackets */}
-                            <div className="absolute -top-4 -left-4 w-8 h-8 border-t-system border-l-system" />
-                            <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-system border-r-system" />
+                        <div className="max-lg:mx-4 col-span-1 lg:col-span-5 relative reveal-up delay-200 mt-8 lg:mt-0 flex justify-center lg:justify-end">
+                            <div className="w-full max-w-170 relative">
+                                {/* Decorative Brackets */}
+                                <div className="absolute -top-4 -left-4 w-8 h-8 border-t-system border-l-system" />
+                                <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-system border-r-system" />
 
-                            {/* Framed Image Component */}
-                            <div className="border-system bg-white p-2 sm:p-4 shadow-solid-accent relative z-10 group">
-                                <div className="border-system overflow-hidden aspect-[4/5] bg-cream relative">
-                                    {/* Placeholder simulating an urban structural photo */}
-                                    <img
-                                        src="https://placehold.co/800x1000/cccccc/1a1a18?text=STRUCTURAL%5CnASSET"
-                                        alt="Urban structural asset"
-                                        className="img-editorial group-hover:scale-105 transition-transform duration-700 ease-out"
-                                    />
+                                {/* Framed Image Component */}
+                                <div className="border-system bg-white p-2 sm:p-4 shadow-solid-accent relative z-10 group">
+                                    <div className="border-system overflow-hidden aspect-[4/5] bg-cream relative">
+                                        {/* Placeholder simulating an urban structural photo */}
+                                        <img
+                                            src="https://placehold.co/800x1000/cccccc/1a1a18?text=STRUCTURAL%5CnASSET"
+                                            alt="Urban structural asset"
+                                            className="img-editorial group-hover:scale-105 transition-transform duration-700 ease-out"
+                                        />
 
-                                    {/* Image Overlay UI */}
-                                    <div className="absolute top-2 left-2 flex gap-1">
-                                        <span className="w-8 h-2 bg-accent-mustard border-system block" />
-                                        <span className="w-4 h-2 bg-accent-blue border-system block" />
+                                        {/* Image Overlay UI */}
+                                        <div className="absolute top-2 left-2 flex gap-1">
+                                            <span className="w-8 h-2 bg-accent-mustard border-system block" />
+                                            <span className="w-4 h-2 bg-accent-blue border-system block" />
+                                        </div>
+                                        <div className="absolute bottom-2 right-2 bg-ivory border-system font-meta text-[10px] px-1">
+                                            FIG. 01
+                                        </div>
                                     </div>
-                                    <div className="absolute bottom-2 right-2 bg-ivory border-system font-meta text-[10px] px-1">
-                                        FIG. 01
+                                    {/* Caption Bar */}
+                                    <div className="mt-2 flex justify-between items-center font-meta text-xs uppercase border-t-system pt-2">
+                                        <span>Sector 4 Environment</span>
+                                        <span className="flex items-center gap-1">
+                                            View <span className="text-xl leading-none">→</span>
+                                        </span>
                                     </div>
                                 </div>
-                                {/* Caption Bar */}
-                                <div className="mt-2 flex justify-between items-center font-meta text-xs uppercase border-t-system pt-2">
-                                    <span>Sector 4 Environment</span>
-                                    <span className="flex items-center gap-1">
-                                        View <span className="text-xl leading-none">→</span>
+
+                                {/* Floating Graphic */}
+                                <div className="absolute bottom-[-48px] left-1/2 max-lg:-translate-x-1/2 lg:top-1/2 lg:-left-12 transform lg:-translate-y-1/2 w-24 h-24 border-system rounded-full flex items-center justify-center bg-cream z-20 shadow-solid hidden sm:flex">
+                                    <span className="font-meta text-xs lg:rotate-[-90deg] uppercase tracking-widest text-center">
+                                        Scan
+                                        <br />
+                                        Data
                                     </span>
                                 </div>
-                            </div>
-
-                            {/* Floating Graphic */}
-                            <div className="absolute top-1/2 -left-12 transform -translate-y-1/2 w-24 h-24 border-system rounded-full flex items-center justify-center bg-cream z-20 shadow-solid hidden sm:flex">
-                                <span className="font-meta text-xs rotate-[-90deg] uppercase tracking-widest text-center">
-                                    Scan
-                                    <br />
-                                    Data
-                                </span>
                             </div>
                         </div>
                     </div>
