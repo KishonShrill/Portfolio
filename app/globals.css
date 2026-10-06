@@ -1,17 +1,190 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
 
+@theme {
+  --color-ivory: #f4f1ea;
+  --color-cream: #eae6db;
+  --color-charcoal: #1a1a18;
+  --color-navy: #2c3545;
+  --color-accent-red: #d34a36;
+  --color-accent-mustard: #deaa35;
+  --color-accent-blue: #5c748c;
+
+  --font-display: "Archivo Black", sans-serif;
+  --font-meta: "Space Mono", monospace;
+
+  --border-width-DEFAULT: 2px;
+  --border-width-3: 3px;
+  --border-width-4: 4px;
+
+  --line-height-solid: 0.85;
+  --line-height-tight: 1.1;
+
+  --letter-spacing-tighter: -0.04em;
+  --letter-spacing-widest: 0.1em;
+
+  --animate-marquee: marquee 20s linear infinite;
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-blink: blink 1s step-end infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+}
+
+/* Design System Variables */
 :root {
-  color-scheme: light;
-  background: #f8fafc;
-  color: #111827;
-  font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --stroke-color: #1a1a18;
+  --stroke-width: 2px;
 }
 
 body {
-  margin: 0;
+  background-color: #f4f1ea;
+  color: #1a1a18;
+  overflow-x: hidden;
 }
 
-a {
-  color: inherit;
+::selection {
+  background: #d34a36;
+  color: #f4f1ea;
+}
+
+/* Subtle Texture Overlay */
+.texture-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+/* Graphic Utilities */
+.border-system {
+  border: var(--stroke-width) solid var(--stroke-color);
+}
+
+.border-b-system {
+  border-bottom: var(--stroke-width) solid var(--stroke-color);
+}
+.border-t-system {
+  border-top: var(--stroke-width) solid var(--stroke-color);
+}
+.border-r-system {
+  border-right: var(--stroke-width) solid var(--stroke-color);
+}
+.border-l-system {
+  border-left: var(--stroke-width) solid var(--stroke-color);
+}
+
+/* Solid shadows for UI components */
+.shadow-solid {
+  box-shadow: 6px 6px 0px 0px var(--stroke-color);
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+.shadow-solid:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px 0px var(--stroke-color);
+}
+.shadow-solid:active {
+  transform: translate(6px, 6px);
+  box-shadow: 0px 0px 0px 0px var(--stroke-color);
+}
+
+/* Accent Shadows */
+.shadow-solid-accent {
+  box-shadow: 6px 6px 0px 0px #d34a36;
+}
+
+/* Editorial Image Treatment */
+.img-editorial {
+  filter: grayscale(100%) contrast(120%) sepia(10%);
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Crosshairs for corners */
+.crosshair-tl::before {
+  content: "+";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  color: #d34a36;
+}
+.crosshair-br::after {
+  content: "+";
+  position: absolute;
+  bottom: -12px;
+  right: -10px;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  color: #d34a36;
+}
+
+/* Animation Classes */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-clip {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.reveal-clip.is-visible {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Ticker Tape */
+.ticker-container {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+.ticker-content {
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f1ea;
+  border-left: 2px solid #1a1a18;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a18;
+  border: 2px solid #f4f1ea;
 }
