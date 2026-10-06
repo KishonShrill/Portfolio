@@ -1,14 +1,16 @@
 import { RevealObserver } from "./components/RevealObserver";
 import { NetworkAuthForm } from "./components/NetworkAuthForm";
+import { AnimejsObserver } from "./components/AnimejsObserver";
 
 export default function Home() {
     return (
         <>
             <RevealObserver />
+            <AnimejsObserver />
 
             <header className="fixed top-0 left-0 w-full z-50 bg-ivory border-b-system flex flex-col">
                 {/* Top Utility Bar */}
-                <div className="flex justify-between items-center px-4 py-2 border-b-system font-meta text-xs uppercase bg-cream">
+                <div className="select-none flex justify-between items-center px-4 py-2 border-b-system font-meta text-xs uppercase bg-cream">
                     <div className="flex gap-4">
                         <span className="flex items-center gap-1">
                             <span className="w-2 h-2 bg-accent-red rounded-full animate-blink" /> SYS.ONLINE
@@ -25,7 +27,7 @@ export default function Home() {
                         href="#"
                         className="flex items-center px-6 border-r-system font-display text-2xl tracking-tighter uppercase hover:bg-charcoal hover:text-ivory transition-colors"
                     >
-                        N/E/O<span className="text-accent-red ml-1">✧</span>
+                        C/L/J/P<span className="text-accent-red animate-spin-slow ml-1">✧</span>
                     </a>
 
                     {/* Links (Desktop) */}
@@ -51,18 +53,22 @@ export default function Home() {
                     </div>
 
                     {/* CTA */}
-                    <button
+                    <a
+                        href="#connect"
                         type="button"
-                        className="px-8 bg-accent-red text-ivory font-display text-xl uppercase tracking-tighter hover:bg-charcoal transition-colors border-l-system border-charcoal cursor-pointer"
+                        className="w-fit px-8 bg-accent-red text-ivory flex items-center justify-center font-display text-xl uppercase tracking-tighter hover:bg-charcoal transition-colors border-l-system border-charcoal cursor-pointer"
                     >
-                        Initiate
-                    </button>
+                        Connect
+                    </a>
                 </nav>
 
                 {/* Marquee Divider */}
                 <div className="border-t-system bg-accent-mustard text-charcoal font-meta text-xs uppercase py-1 overflow-hidden">
-                    <div className="ticker-container w-full">
+                    <div className="ticker-container w-full select-none">
                         <div className="animate-marquee ticker-content">
+                            /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE{" "}
+                        </div>
+                        <div className="animate-marquee ticker-content" aria-hidden="true">
                             /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE{" "}
                         </div>
                         <div className="animate-marquee ticker-content" aria-hidden="true">
@@ -74,14 +80,32 @@ export default function Home() {
 
             <main className="flex-grow pt-[104px] pb-24 px-4 sm:px-8">
                 {/* Hero Section */}
-                <section className="lg:max-h-[calc(100dvh-123px)] relative flex flex-col justify-center py-8 lg:pb-12 lg:pt-16">
+                <section className="lg:max-h-[calc(100dvh-123px)] relative flex flex-col justify-center py-8 lg:pb-12 lg:pt-16 overflow-hidden">
                     {/* Background Graphic Elements */}
-                    <div className="absolute top-10 right-10 w-32 h-32 border-system rounded-full opacity-20 pointer-events-none" />
+                    <div className="absolute top-20 lg:top-10 right-10 w-32 h-32 border-system rounded-full opacity-15 pointer-events-none" />
+
+                    {/* Central 4-Pointed Star & Animated Concentric Rings */}
+                    <div className="max-lg:h-[70vh] absolute inset-0 flex items-center justify-center pointer-events-none z-0 select-none">
+                        {/* Outer Big Circle (far away from the first circle) */}
+                        <div className="absolute w-[440px] h-[440px] sm:w-[620px] sm:h-[620px] lg:w-[800px] lg:h-[800px] rounded-full border-3 border-charcoal/20 border-dashed animate-expand-retract" />
+
+                        {/* Inner Circle surrounding the star */}
+                        <div className="absolute w-36 h-36 rounded-full border-4 border-charcoal/30 animate-expand-retract" />
+
+                        {/* Small 4-pointed Star */}
+                        <svg
+                            className="w-5 h-5 sm:w-7 sm:h-7 text-accent-red animate-spin-slow relative z-10 opacity-75"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path d="M12 0C12 6.62742 6.62742 12 0 12C6.62742 12 12 17.3726 12 24C12 17.3726 17.3726 12 24 12C17.3726 12 12 6.62742 12 0Z" />
+                        </svg>
+                    </div>
 
                     <div className="h-full w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
                         {/* Left: Massive Typography */}
                         <div className="h-full col-span-1 lg:col-span-7 flex flex-col items-start relative crosshair-tl crosshair-br p-4 sm:p-0">
-                            <div className="font-meta text-sm uppercase border-system px-3 py-1 mb-4 lg:mb-6 inline-flex items-center gap-2 bg-cream shadow-solid">
+                            <div className="select-none font-meta text-sm uppercase border-system px-3 py-1 mb-4 lg:mb-6 inline-flex items-center gap-2 bg-cream shadow-solid">
                                 <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 0C12 6.62742 6.62742 12 0 12C6.62742 12 12 17.3726 12 24C12 17.3726 17.3726 12 24 12C17.3726 12 12 6.62742 12 0Z" />
                                 </svg>
@@ -89,10 +113,10 @@ export default function Home() {
                             </div>
 
                             {/* Hero Text */}
-                            <h1 className="text-black z-30 font-display text-[clamp(2.75rem,8.5vw,5.5rem)] lg:text-[clamp(3.5rem,5.8vw,6.5rem)] xl:text-[clamp(4.5rem,5.6vw,7.5rem)] leading-solid tracking-tighter uppercase flex flex-col">
-                                <span className="reveal-clip">URBAN</span>
-                                <span className="reveal-clip delay-100 flex items-center">
-                                    SYNTH
+                            <h1 className="mt-8 font-display text-[clamp(2.75rem,8.5vw,5.5rem)] lg:text-[clamp(3.5rem,5.8vw,6.5rem)] xl:text-[clamp(4.5rem,5.6vw,7.5rem)] leading-solid tracking-tighter uppercase flex flex-col">
+                                <span className="reveal-clip leading-10 md:leading-22 2xl:mb-4 tracking-tighter hover:tracking-wider transition-all duration-200">THE</span>
+                                <span className="reveal-clip leading-10 md:leading-22 delay-100 flex items-center tracking-tighter">
+                                    CODE
                                     <svg
                                         className="w-[0.8em] h-[0.8em] ml-4 text-accent-red animate-spin-slow inline-block shrink-0"
                                         viewBox="0 0 24 24"
@@ -101,22 +125,59 @@ export default function Home() {
                                         <path d="M12 0C12 6.62742 6.62742 12 0 12C6.62742 12 12 17.3726 12 24C12 17.3726 17.3726 12 24 12C17.3726 12 12 6.62742 12 0Z" />
                                     </svg>
                                 </span>
-                                <span className="reveal-clip delay-200">CARTEL</span>
+                                <span className="reveal-clip leading-16 lg:leading-22 delay-200 text-accent-red flex! items-center gap-4">
+                                    <span className="word-roller">
+                                        <span className="word-roller-inner animate-roll-up pr-1">
+                                            <span>IS</span>
+                                            <span aria-hidden="true">IS</span>
+                                        </span>
+                                    </span>
+                                    <span className="word-roller">
+                                        <span className="word-roller-inner animate-roll-down">
+                                            <span aria-hidden="true">TALKING.</span>
+                                            <span>TALKING.</span>
+                                        </span>
+                                    </span>
+                                </span>
                             </h1>
 
+                            <ul className="lg:ml-8 mt-8 mb-16 reveal-clip max-lg:w-full pr-4">
+                                <li className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
+                                    <span className="text-accent-red font-black font-display">01</span>
+                                    <div className="flex flex-col">
+                                        <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">MY SOCIALS</span>
+                                        <span className="text-sm mt-1">FIELD NOTE / 01</span>
+                                    </div>
+                                </li>
+                                <li className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
+                                    <span className="text-accent-red font-black font-display">02</span>
+                                    <div className="flex flex-col">
+                                        <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">RESUME</span>
+                                        <span className="text-sm mt-1">FIELD NOTE / 02</span>
+                                    </div>
+                                </li>
+                                <li className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
+                                    <span className="text-accent-red font-black font-display">03</span>
+                                    <div className="flex flex-col">
+                                        <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">DOWNLOAD</span>
+                                        <span className="text-sm mt-1">FIELD NOTE / 03</span>
+                                    </div>
+                                </li>
+                            </ul>
+
                             <div className="w-full mt-auto">
-                                <div className="mt-4 font-meta text-accent-blue opacity-50 text-sm pointer-events-none">
+                                <div className="mt-4 font-meta text-accent-blue opacity-50 text-sm pointer-events-none scramble-text">
                                     [ SECTION // 00 ]
                                 </div>
                                 <div className="mt-4 max-w-lg w-full border-t-system pt-4 reveal-up delay-300">
                                     <div className="grid grid-cols-2 gap-4">
                                         <div>
                                             <p className="font-meta text-xs text-gray-500 uppercase">Input Node</p>
-                                            <p className="font-meta font-bold">A-77.X</p>
+                                            <p className="font-meta font-bold scramble-text">A-77.X</p>
                                         </div>
                                         <div>
                                             <p className="font-meta text-xs text-gray-500 uppercase">Status</p>
-                                            <p className="font-meta font-bold">AWAITING COMMAND</p>
+                                            <p className="font-meta font-bold scramble-text">AWAITING COMMAND</p>
                                         </div>
                                     </div>
                                 </div>
@@ -135,9 +196,11 @@ export default function Home() {
                                     <div className="border-system overflow-hidden aspect-[4/5] bg-cream relative">
                                         {/* Placeholder simulating an urban structural photo */}
                                         <img
-                                            src="https://placehold.co/800x1000/cccccc/1a1a18?text=STRUCTURAL%5CnASSET"
+                                            //src="https://placehold.co/800x1000/cccccc/1a1a18?text=STRUCTURAL%5CnASSET"
+                                            src="me.jpg"
                                             alt="Urban structural asset"
                                             className="img-editorial group-hover:scale-105 transition-transform duration-700 ease-out"
+                                            draggable="false"
                                         />
 
                                         {/* Image Overlay UI */}
@@ -160,7 +223,7 @@ export default function Home() {
 
                                 {/* Floating Graphic */}
                                 <div className="absolute bottom-[-48px] left-1/2 max-lg:-translate-x-1/2 lg:top-1/2 lg:-left-12 transform lg:-translate-y-1/2 w-24 h-24 border-system rounded-full flex items-center justify-center bg-cream z-20 shadow-solid hidden sm:flex">
-                                    <span className="font-meta text-xs lg:rotate-[-90deg] uppercase tracking-widest text-center">
+                                    <span className="select-none font-meta text-xs lg:rotate-[-90deg] uppercase tracking-widest text-center">
                                         Scan
                                         <br />
                                         Data
@@ -172,10 +235,10 @@ export default function Home() {
                 </section>
 
                 {/* Overview Section */}
-                <section id="overview" className="py-24 border-t-system relative">
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 gap-x-8">
+                <section id="overview" className="scroll-mt-30 py-24 border-t-system relative">
+                    <div className="grid grid-cols-1 auto-rows-auto md:grid-cols-12 gap-y-12 gap-x-8">
                         {/* Massive Number Marker */}
-                        <div className="col-span-1 md:col-span-3 flex flex-col justify-start reveal-up">
+                        <div className="col-span-1 md:col-span-12 xl:col-span-3 flex flex-col justify-start reveal-up">
                             <span className="font-display text-[15vw] md:text-[8vw] leading-solid text-charcoal opacity-10">
                                 01
                             </span>
@@ -185,7 +248,7 @@ export default function Home() {
                         </div>
 
                         {/* Text Composition */}
-                        <div className="col-span-1 md:col-span-6 flex flex-col gap-8 reveal-up delay-100 font-meta">
+                        <div className="col-span-1 md:col-span-9 xl:col-span-6 flex flex-col gap-8 reveal-up delay-100 font-meta">
                             <p className="text-lg leading-relaxed bg-cream p-6 border-system shadow-solid relative">
                                 <span className="absolute top-0 left-0 bg-charcoal text-ivory text-xs px-2 py-1 transform -translate-y-full border-system border-b-0">
                                     LOG ENTRY
@@ -239,7 +302,7 @@ export default function Home() {
                 {/* Database Section */}
                 <section
                     id="database"
-                    className="py-24 border-t-system border-b-system relative bg-cream -mx-4 px-4 sm:-mx-8 sm:px-8"
+                    className="py-24 scroll-mt-16 border-t-system border-b-system relative bg-cream -mx-4 px-4 sm:-mx-8 sm:px-8"
                 >
                     <div className="flex justify-between items-end mb-12 reveal-up">
                         <h2 className="font-display text-5xl sm:text-7xl uppercase leading-none tracking-tighter">
@@ -263,7 +326,8 @@ export default function Home() {
                                 </div>
                                 <div className="border-system overflow-hidden bg-ivory aspect-square">
                                     <img
-                                        src="https://placehold.co/600x600/e0a938/1a1a18?text=WARNING"
+                                        //src="https://placehold.co/600x600/e0a938/1a1a18?text=WARNING"
+                                        src="betteriligan-logo4.svg"
                                         alt="Warning Label Graphic"
                                         className="img-editorial group-hover:scale-105 transition-transform duration-500"
                                     />
@@ -271,8 +335,8 @@ export default function Home() {
                             </div>
                             <div className="mt-3 flex justify-between items-start font-meta uppercase">
                                 <div>
-                                    <h3 className="font-bold text-lg leading-tight">Hazard Signage</h3>
-                                    <p className="text-xs text-gray-600 mt-1">Sector B</p>
+                                    <h3 className="font-bold text-2xl md:text-lg leading-tight">BetterIliganCity.org</h3>
+                                    <p className="text-sm md:text-xs text-gray-600 mt-1">a volunteer-led civic tech initiative to digitalize and streamline access to local governance, policies, and open data for Iligan City</p>
                                 </div>
                                 <div className="w-8 h-8 rounded-full border-system flex items-center justify-center transform -rotate-45 group-hover:bg-accent-red group-hover:text-ivory transition-colors">
                                     →
@@ -288,7 +352,8 @@ export default function Home() {
                                 </div>
                                 <div className="border-system overflow-hidden bg-ivory aspect-video">
                                     <img
-                                        src="https://placehold.co/800x450/5c748c/f4f1ea?text=INTERFACE"
+                                        //src="https://placehold.co/800x450/5c748c/f4f1ea?text=INTERFACE"
+                                        src="citifix.png"
                                         alt="Interface mockup"
                                         className="img-editorial group-hover:scale-105 transition-transform duration-500"
                                     />
@@ -296,8 +361,8 @@ export default function Home() {
                             </div>
                             <div className="mt-3 flex justify-between items-start font-meta uppercase">
                                 <div>
-                                    <h3 className="font-bold text-lg leading-tight">Terminal HUD</h3>
-                                    <p className="text-xs text-gray-600 mt-1">Operator View</p>
+                                    <h3 className="font-bold text-2xl md:text-lg leading-tight">CitiFIX BetterIliganCity</h3>
+                                    <p className="text-sm md:text-xs text-gray-600 mt-1">A civic reporting platform for Iligan City that enables citizens to report infrastructure issues, view them on a map, and track resolution progress.</p>
                                 </div>
                                 <div className="w-8 h-8 rounded-full border-system flex items-center justify-center transform -rotate-45 group-hover:bg-accent-red group-hover:text-ivory transition-colors">
                                     →
@@ -313,7 +378,8 @@ export default function Home() {
                                 </div>
                                 <div className="border-system overflow-hidden bg-ivory aspect-[2/1]">
                                     <img
-                                        src="https://placehold.co/1000x500/d34a36/f4f1ea?text=CORRIDOR"
+                                        //src="https://placehold.co/1000x500/d34a36/f4f1ea?text=CORRIDOR"
+                                        src="budgetbuddy.png"
                                         alt="Corridor shot"
                                         className="img-editorial group-hover:scale-105 transition-transform duration-500"
                                     />
@@ -321,8 +387,8 @@ export default function Home() {
                             </div>
                             <div className="mt-3 flex justify-between items-start font-meta uppercase">
                                 <div>
-                                    <h3 className="font-bold text-lg leading-tight">Transit Hub</h3>
-                                    <p className="text-xs text-gray-600 mt-1">Lower Levels</p>
+                                    <h3 className="font-bold text-2xl md:text-lg leading-tight">Budget Buddy</h3>
+                                    <p className="text-sm md:text-xs text-gray-600 mt-1">A budget expense tracker, budgeting, and price checking to enhance the livelihood and habits of the Iligan city people</p>
                                 </div>
                                 <div className="w-8 h-8 rounded-full border-system flex items-center justify-center transform -rotate-45 group-hover:bg-accent-red group-hover:text-ivory transition-colors">
                                     →
@@ -333,10 +399,10 @@ export default function Home() {
                         {/* Text Block replacing Item 4 */}
                         <div
                             id="archives"
-                            className="md:col-span-4 flex items-center justify-center border-system bg-ivory p-8 shadow-solid reveal-up delay-100"
+                            className="scroll-mt-40 target:ring-4 target:ring-blue-500 target:bg-blue-50 md:col-span-4 flex items-center justify-center border-system bg-ivory p-8 shadow-solid reveal-up delay-100"
                         >
                             <div className="font-display text-3xl uppercase text-center flex flex-col gap-4">
-                                <svg className="w-12 h-12 mx-auto text-accent-mustard" viewBox="0 0 24 24" fill="currentColor">
+                                <svg className="w-12 h-12 rotate-45 mx-auto animate-spin-slow text-accent-mustard" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 0C12 6.62742 6.62742 12 0 12C6.62742 12 12 17.3726 12 24C12 17.3726 17.3726 12 24 12C17.3726 12 12 6.62742 12 0Z" />
                                 </svg>
                                 <span>
@@ -358,7 +424,7 @@ export default function Home() {
                 </section>
 
                 {/* Network Section */}
-                <section className="py-32 relative flex flex-col items-center justify-center bg-charcoal text-ivory mt-24 border-system -mx-4 px-4 sm:-mx-8 sm:px-8 overflow-hidden crosshair-tl crosshair-br">
+                <section id="connect" className="py-32 relative flex flex-col items-center justify-center bg-charcoal text-ivory mt-24 border-system -mx-4 px-4 sm:-mx-8 sm:px-8 overflow-hidden crosshair-tl crosshair-br">
                     {/* Graphic Background elements */}
                     <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
                         <svg
@@ -401,7 +467,7 @@ export default function Home() {
                     <div className="col-span-1 md:col-span-2 flex flex-col justify-between">
                         <div>
                             <span className="font-display text-4xl tracking-tighter">
-                                N/E/O<span className="text-accent-red">✧</span>
+                                C/H/R/I/S/C/E/N/T<span className="text-accent-red">✧</span>
                             </span>
                             <p className="mt-2 text-xs text-gray-600 max-w-xs">
                                 An experimental visual design system heavily inspired by urban editorial, motion graphics, and print media paradigms.
