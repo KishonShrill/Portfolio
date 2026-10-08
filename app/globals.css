@@ -509,6 +509,60 @@ body {
 }
 
 
+/* Under Construction Hazard Patterns */
+.pattern-hazard-mustard {
+    background: repeating-linear-gradient(
+        -45deg,
+        #deaa35,
+        #deaa35 12px,
+        #1a1a18 12px,
+        #1a1a18 24px
+    );
+    background-size: 34px 100%;
+}
+
+.pattern-hazard-red {
+    background: repeating-linear-gradient(
+        -45deg,
+        #d34a36,
+        #d34a36 12px,
+        #1a1a18 12px,
+        #1a1a18 24px
+    );
+    background-size: 34px 100%;
+}
+
+@keyframes hazard-crawl {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 34px 0;
+    }
+}
+
+.animate-hazard-crawl {
+    animation: hazard-crawl 1.2s linear infinite;
+}
+
+/* Modal Pop In Animation */
+@keyframes modal-pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.92) translateY(16px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.animate-modal-in {
+    animation: modal-pop-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 12px;

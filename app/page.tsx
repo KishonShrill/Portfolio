@@ -2,6 +2,7 @@ import Link from "vinext/shims/link";
 import { RevealObserver } from "./components/RevealObserver";
 import { NetworkAuthForm } from "./components/NetworkAuthForm";
 import { AnimejsObserver } from "./components/AnimejsObserver";
+import { InitiateSequenceModal } from "./components/InitiateSequenceModal";
 
 export default function Home() {
     return (
@@ -54,11 +55,11 @@ export default function Home() {
 
                     {/* CTA */}
                     <a
-                        href="#connect"
+                        href="#contact"
                         type="button"
                         className="w-fit px-8 bg-accent-red text-ivory flex items-center justify-center font-display text-xl uppercase tracking-tighter hover:bg-charcoal transition-colors border-l-system border-charcoal cursor-pointer"
                     >
-                        Connect
+                        Contact
                     </a>
                 </nav>
 
@@ -349,11 +350,11 @@ export default function Home() {
                                             </span>
                                         </div>
 
-                                        <ul className="mt-3 space-y-1.5 text-sm text-gray-700 leading-normal">
+                                        <ul className="mt-3 space-y-1.5 text-sm text-gray-700 leading-normal select-none">
                                             <li className="flex items-start gap-2">
                                                 <span className="text-accent-blue font-bold">▪</span>
                                                 <span className="scramble-text">
-                                                    Spearheaded the development of <strong>betteriligancity.org</strong>, providing citizens of Iligan City with transparent, accessible public information and improved digital services.
+                                                    Spearheaded the development of <Link className="select-auto hover:text-orange-500 hover:underline" href={"https://betteriligancity.org"} target="_blank"><strong>betteriligancity.org</strong></Link>, providing citizens of Iligan City with transparent, accessible public information and improved digital services.
                                                 </span>
                                             </li>
                                             <li className="flex items-start gap-2">
@@ -395,7 +396,7 @@ export default function Home() {
                                         </div>
                                         <p className="text-[11px] text-gray-500">Center for Digital Iligan, Innovation & Sustainability</p>
 
-                                        <ul className="mt-3 space-y-1.5 text-sm text-gray-700 leading-normal">
+                                        <ul className="mt-3 space-y-1.5 text-sm text-gray-700 leading-normal select-none">
                                             <li className="flex items-start gap-2">
                                                 <span className="text-accent-mustard font-bold">▪</span>
                                                 <span className="scramble-text">
@@ -426,7 +427,7 @@ export default function Home() {
                         </div>
 
                         {/* Right: Technical Capabilities Matrix */}
-                        <div className="col-span-1 md:col-span-12 xl:col-span-3 flex flex-col gap-4 reveal-up delay-200 font-meta">
+                        <div className="col-span-1 md:col-span-12 xl:col-span-3 flex flex-col gap-4 reveal-up delay-200 font-meta xl:sticky xl:top-36 self-start">
                             {/* Graphic Visual Box */}
                             <div className="border-system h-24 bg-accent-blue relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMODggWk04IDBMMCA4IFoiIHN0cm9rZT0iIzFBMUExOCIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg==')] opacity-50 mix-blend-multiply group-hover:scale-150 transition-transform duration-1000" />
@@ -731,12 +732,7 @@ export default function Home() {
                                     <br />
                                     Archive
                                 </span>
-                                <button
-                                    type="button"
-                                    className="font-meta text-sm border-system py-2 px-4 hover:bg-charcoal hover:text-ivory transition-colors mt-4 bg-white shadow-solid cursor-pointer"
-                                >
-                                    Initiate Sequence
-                                </button>
+                                <InitiateSequenceModal />
                             </div>
                         </div>
                     </div>
@@ -812,24 +808,24 @@ export default function Home() {
                     {/* Social/Contact */}
                     <div className="flex flex-col gap-2">
                         <p className="font-bold border-b-system pb-1 mb-2">Comms</p>
-                        <a
-                            href="#"
+                        <Link
+                            href="www.linkedin.com/in/chriscent-louis-june-pingol"
                             className="hover:bg-charcoal hover:text-ivory border border-transparent px-1 -ml-1 transition-colors"
                         >
-                            Twitter (X)
-                        </a>
-                        <a
-                            href="#"
+                            LinkedIn
+                        </Link>
+                        <Link
+                            href="https://www.facebook.com/Perseque/"
                             className="hover:bg-charcoal hover:text-ivory border border-transparent px-1 -ml-1 transition-colors"
                         >
                             Facebook
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            href="https://github.com/KishonShrill"
                             className="hover:bg-charcoal hover:text-ivory border border-transparent px-1 -ml-1 transition-colors"
                         >
                             GitHub
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </footer>
