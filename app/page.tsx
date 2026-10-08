@@ -1,3 +1,4 @@
+import Link from "vinext/shims/link";
 import { RevealObserver } from "./components/RevealObserver";
 import { NetworkAuthForm } from "./components/NetworkAuthForm";
 import { AnimejsObserver } from "./components/AnimejsObserver";
@@ -113,9 +114,11 @@ export default function Home() {
                             </div>
 
                             {/* Hero Text */}
-                            <h1 className="mt-8 font-display text-[clamp(2.75rem,8.5vw,5.5rem)] lg:text-[clamp(3.5rem,5.8vw,6.5rem)] xl:text-[clamp(4.5rem,5.6vw,7.5rem)] leading-solid tracking-tighter uppercase flex flex-col">
-                                <span className="reveal-clip leading-10 md:leading-22 2xl:mb-4 tracking-tighter hover:tracking-wider transition-all duration-200">THE</span>
-                                <span className="reveal-clip leading-10 md:leading-22 delay-100 flex items-center tracking-tighter">
+                            <h1 className="mt-8 font-display text-[clamp(2.75rem,8.5vw,5.5rem)] lg:text-[clamp(3.5rem,5.8vw,6.5rem)] xl:text-[clamp(4.5rem,5.6vw,7.5rem)] leading-solid tracking-tighter uppercase flex flex-col select-none">
+                                <span className="reveal-clip leading-10 md:leading-22 2xl:mb-4 tracking-tighter hover:tracking-wider cursor-pointer">
+                                    THE
+                                </span>
+                                <span className="reveal-clip leading-10 md:leading-22 delay-100 flex items-center tracking-tighter hover:tracking-wider cursor-pointer">
                                     CODE
                                     <svg
                                         className="w-[0.8em] h-[0.8em] ml-4 text-accent-red animate-spin-slow inline-block shrink-0"
@@ -141,7 +144,7 @@ export default function Home() {
                                 </span>
                             </h1>
 
-                            <ul className="lg:ml-8 mt-8 mb-16 reveal-clip max-lg:w-full pr-4">
+                            <ul className="lg:ml-8 mt-8 mb-16 pl-1 reveal-clip max-lg:w-full pr-4">
                                 <li className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
                                     <span className="text-accent-red font-black font-display">01</span>
                                     <div className="flex flex-col">
@@ -149,20 +152,20 @@ export default function Home() {
                                         <span className="text-sm mt-1">FIELD NOTE / 01</span>
                                     </div>
                                 </li>
-                                <li className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
+                                <Link href={"/chriscent_resume.pdf"} target="_blank" className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
                                     <span className="text-accent-red font-black font-display">02</span>
                                     <div className="flex flex-col">
                                         <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">RESUME</span>
                                         <span className="text-sm mt-1">FIELD NOTE / 02</span>
                                     </div>
-                                </li>
-                                <li className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
+                                </Link>
+                                <Link href={"/chriscent_resume.pdf"} target="_blank" download className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
                                     <span className="text-accent-red font-black font-display">03</span>
                                     <div className="flex flex-col">
                                         <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">DOWNLOAD</span>
                                         <span className="text-sm mt-1">FIELD NOTE / 03</span>
                                     </div>
-                                </li>
+                                </Link>
                             </ul>
 
                             <div className="w-full mt-auto">
@@ -242,7 +245,8 @@ export default function Home() {
                             <span className="font-display text-[15vw] md:text-[8vw] leading-solid text-charcoal opacity-10">
                                 01
                             </span>
-                            <h2 className="font-display text-4xl uppercase mt-2">Architecture</h2>
+
+                            <h2 className="font-display text-4xl uppercase mt-2">ARCHITECTURE</h2>
                             <div className="w-full h-2 bg-charcoal mt-4 mb-2" />
                             <p className="font-meta text-xs uppercase">Documenting the grid collapse.</p>
                         </div>
@@ -253,7 +257,12 @@ export default function Home() {
                                 <span className="absolute top-0 left-0 bg-charcoal text-ivory text-xs px-2 py-1 transform -translate-y-full border-system border-b-0">
                                     LOG ENTRY
                                 </span>
-                                The underlying graphic design system reinterpreted into an original layout. Utilizing heavy typography, strict grid containment, and utilitarian motifs to construct a digital environment that mimics physical print and motion graphics paradigms.
+                                <span className="scramble-text">
+                                    A Full-Stack Web Developer and Researcher with hands-on experience building responsive web applications,
+                                    civic tech platforms, and AI-driven systems. Proficient in React, Next.js, Python, and MongoDB. Passionate about
+                                    clean UI/UX, open-source collaboration, and leveraging technology to improve public services and solve
+                                    real-world problems.
+                                </span>
                             </p>
 
                             <div className="flex gap-4 items-center">
@@ -265,10 +274,10 @@ export default function Home() {
                             </div>
 
                             <div className="columns-1 sm:columns-2 gap-8 text-sm">
-                                <p className="mb-4">
+                                <p className="mb-4 scramble-text">
                                     Avoid generic solutions. The composition demands visual tension. Typography acts as structural elements rather than mere content delivery vehicles.
                                 </p>
-                                <p>
+                                <p className="scramble-text">
                                     We embrace the noise. The subtle grain of printed matter, the misalignment of registration marks. These imperfections ground the digital experience in tactile reality.
                                 </p>
                             </div>
@@ -299,10 +308,115 @@ export default function Home() {
                     </div>
                 </section>
 
+                {/* Kinetic Banner Strip between Overview and Database */}
+                <div className="relative -mx-4 sm:-mx-8 overflow-hidden select-none">
+                    <div className="flex w-max animate-banner-roll">
+                        {/* Set 1 */}
+                        <div className="flex items-center shrink-0">
+                            <div className="w-dvw banner-tail-mask flex items-center justify-between sm:gap-10 pl-6 sm:pl-10 pr-[40dvw] py-4 lg:py-8 bg-banner-gradient relative shrink-0">
+                                {/* 5 Stars Olympic W-Formation */}
+                                <svg
+                                    className="w-16 h-8 sm:w-22 sm:h-11 shrink-0 rotate-270 
+                                    max-[800px]:scale-65 max-[1150px]:scale-75 max-[1400px]:scale-100 max-[1750px]:scale-125 min-[1750px]:scale-150
+                                    "
+                                    viewBox="0 0 96 44"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M10 0C10 5.523 5.523 10 0 10C5.523 10 10 14.477 10 20C10 14.477 14.477 10 20 10C14.477 10 10 5.523 10 0Z"
+                                        transform="translate(4, 2)"
+                                        className="text-ivory"
+                                    />
+                                    <path
+                                        d="M10 0C10 5.523 5.523 10 0 10C5.523 10 10 14.477 10 20C10 14.477 14.477 10 20 10C14.477 10 10 5.523 10 0Z"
+                                        transform="translate(21, 22)"
+                                        className="text-ivory"
+                                    />
+                                    <path
+                                        d="M10 0C10 5.523 5.523 10 0 10C5.523 10 10 14.477 10 20C10 14.477 14.477 10 20 10C14.477 10 10 5.523 10 0Z"
+                                        transform="translate(38, 2)"
+                                        className="text-ivory"
+                                    />
+                                    <path
+                                        d="M10 0C10 5.523 5.523 10 0 10C5.523 10 10 14.477 10 20C10 14.477 14.477 10 20 10C14.477 10 10 5.523 10 0Z"
+                                        transform="translate(55, 22)"
+                                        className="text-ivory"
+                                    />
+                                    <path
+                                        d="M10 0C10 5.523 5.523 10 0 10C5.523 10 10 14.477 10 20C10 14.477 14.477 10 20 10C14.477 10 10 5.523 10 0Z"
+                                        transform="translate(72, 2)"
+                                        className="text-ivory"
+                                    />
+                                </svg>
+
+                                {/* Middle Text */}
+                                <span className="
+                                    font-display 
+                                    max-[700px]:text-lg max-[1150px]:text-3xl max-[1400px]:text-7xl max-[1750px]:text-8xl min-[1750px]:text-9xl 
+                                    tracking-widest uppercase text-ivory font-black whitespace-nowrap
+                                    "
+                                >
+                                    KISHON_SHRILL
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Set 2 (Seamless Duplicate) */}
+                        <div className="flex items-center shrink-0">
+                            <div className="w-dvw banner-tail-mask flex items-center justify-between sm:gap-10 pl-6 sm:pl-10 pr-[40dvw] py-4 lg:py-8 bg-banner-gradient relative shrink-0">
+                                {/* 5 Stars Olympic W-Formation */}
+                                <svg
+                                    className="w-16 h-8 sm:w-22 sm:h-11 shrink-0 rotate-270 
+                                    max-[800px]:scale-65 max-[1150px]:scale-75 max-[1400px]:scale-100 max-[1750px]:scale-125 min-[1750px]:scale-150
+                                    "
+                                    viewBox="0 0 96 44"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M10 0C10 5.523 5.523 10 0 10C5.523 10 10 14.477 10 20C10 14.477 14.477 10 20 10C14.477 10 10 5.523 10 0Z"
+                                        transform="translate(4, 2)"
+                                        className="text-ivory"
+                                    />
+                                    <path
+                                        d="M10 0C10 5.523 5.523 10 0 10C5.523 10 10 14.477 10 20C10 14.477 14.477 10 20 10C14.477 10 10 5.523 10 0Z"
+                                        transform="translate(21, 22)"
+                                        className="text-ivory"
+                                    />
+                                    <path
+                                        d="M10 0C10 5.523 5.523 10 0 10C5.523 10 10 14.477 10 20C10 14.477 14.477 10 20 10C14.477 10 10 5.523 10 0Z"
+                                        transform="translate(38, 2)"
+                                        className="text-ivory"
+                                    />
+                                    <path
+                                        d="M10 0C10 5.523 5.523 10 0 10C5.523 10 10 14.477 10 20C10 14.477 14.477 10 20 10C14.477 10 10 5.523 10 0Z"
+                                        transform="translate(55, 22)"
+                                        className="text-ivory"
+                                    />
+                                    <path
+                                        d="M10 0C10 5.523 5.523 10 0 10C5.523 10 10 14.477 10 20C10 14.477 14.477 10 20 10C14.477 10 10 5.523 10 0Z"
+                                        transform="translate(72, 2)"
+                                        className="text-ivory"
+                                    />
+                                </svg>
+
+                                {/* Middle Text */}
+                                <span className="
+                                    font-display 
+                                    max-[700px]:text-lg max-[1150px]:text-3xl max-[1400px]:text-7xl max-[1750px]:text-8xl min-[1750px]:text-9xl 
+                                    tracking-widest uppercase text-ivory font-black whitespace-nowrap
+                                    "
+                                >
+                                    KISHON_SHRILL
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Database Section */}
                 <section
                     id="database"
-                    className="py-24 scroll-mt-16 border-t-system border-b-system relative bg-cream -mx-4 px-4 sm:-mx-8 sm:px-8"
+                    className="py-24 scroll-mt-16 border-b-system relative bg-cream -mx-4 px-4 sm:-mx-8 sm:px-8"
                 >
                     <div className="flex justify-between items-end mb-12 reveal-up">
                         <h2 className="font-display text-5xl sm:text-7xl uppercase leading-none tracking-tighter">
@@ -319,7 +433,11 @@ export default function Home() {
                     {/* Asymmetrical Grid Gallery */}
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-10">
                         {/* Item 1 */}
-                        <div className="md:col-span-5 flex flex-col group reveal-up">
+                        <Link
+                            className="md:col-span-5 flex flex-col group reveal-up"
+                            href={"https://betteriligancity.org"}
+                            target="_blank"
+                        >
                             <div className="border-system bg-white p-2 shadow-solid relative">
                                 <div className="absolute top-0 right-0 bg-charcoal text-ivory font-meta text-xs px-2 py-1 z-10">
                                     #001
@@ -336,16 +454,20 @@ export default function Home() {
                             <div className="mt-3 flex justify-between items-start font-meta uppercase">
                                 <div>
                                     <h3 className="font-bold text-2xl md:text-lg leading-tight">BetterIliganCity.org</h3>
-                                    <p className="text-sm md:text-xs text-gray-600 mt-1">a volunteer-led civic tech initiative to digitalize and streamline access to local governance, policies, and open data for Iligan City</p>
+                                    <p className="text-sm md:text-xs text-gray-600 mt-1 scramble-text">a volunteer-led civic tech initiative to digitalize and streamline access to local governance, policies, and open data for Iligan City</p>
                                 </div>
                                 <div className="w-8 h-8 rounded-full border-system flex items-center justify-center transform -rotate-45 group-hover:bg-accent-red group-hover:text-ivory transition-colors">
                                     →
                                 </div>
                             </div>
-                        </div>
+                        </Link>
 
                         {/* Item 2 (Offset) */}
-                        <div className="md:col-span-7 md:mt-24 flex flex-col group reveal-up delay-100">
+                        <Link
+                            className="md:col-span-7 md:mt-24 flex flex-col group reveal-up delay-100"
+                            href={"https://citifix.betteriligancity.org"}
+                            target="_blank"
+                        >
                             <div className="border-system bg-white p-2 shadow-solid relative">
                                 <div className="absolute top-0 left-0 bg-accent-blue text-ivory font-meta text-xs px-2 py-1 z-10 border-system border-t-0 border-l-0">
                                     #002
@@ -362,16 +484,20 @@ export default function Home() {
                             <div className="mt-3 flex justify-between items-start font-meta uppercase">
                                 <div>
                                     <h3 className="font-bold text-2xl md:text-lg leading-tight">CitiFIX BetterIliganCity</h3>
-                                    <p className="text-sm md:text-xs text-gray-600 mt-1">A civic reporting platform for Iligan City that enables citizens to report infrastructure issues, view them on a map, and track resolution progress.</p>
+                                    <p className="text-sm md:text-xs text-gray-600 mt-1 scramble-text">A civic reporting platform for Iligan City that enables citizens to report infrastructure issues, view them on a map, and track resolution progress.</p>
                                 </div>
                                 <div className="w-8 h-8 rounded-full border-system flex items-center justify-center transform -rotate-45 group-hover:bg-accent-red group-hover:text-ivory transition-colors">
                                     →
                                 </div>
                             </div>
-                        </div>
+                        </Link>
 
                         {/* Item 3 */}
-                        <div className="md:col-span-8 flex flex-col group reveal-up">
+                        <Link
+                            className="md:col-span-8 flex flex-col group reveal-up"
+                            href={"https://budgetbuddy.betteriligacity.org"}
+                            target="_blank"
+                        >
                             <div className="border-system bg-white p-2 shadow-solid relative">
                                 <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 rotate-90 origin-center bg-charcoal text-ivory font-meta text-xs px-2 py-1 z-10 tracking-widest">
                                     RESTRICTED
@@ -388,13 +514,13 @@ export default function Home() {
                             <div className="mt-3 flex justify-between items-start font-meta uppercase">
                                 <div>
                                     <h3 className="font-bold text-2xl md:text-lg leading-tight">Budget Buddy</h3>
-                                    <p className="text-sm md:text-xs text-gray-600 mt-1">A budget expense tracker, budgeting, and price checking to enhance the livelihood and habits of the Iligan city people</p>
+                                    <p className="text-sm md:text-xs text-gray-600 mt-1 scramble-text">A budget expense tracker, budgeting, and price checking to enhance the livelihood and habits of the Iligan city people</p>
                                 </div>
                                 <div className="w-8 h-8 rounded-full border-system flex items-center justify-center transform -rotate-45 group-hover:bg-accent-red group-hover:text-ivory transition-colors">
                                     →
                                 </div>
                             </div>
-                        </div>
+                        </Link>
 
                         {/* Text Block replacing Item 4 */}
                         <div
@@ -459,7 +585,7 @@ export default function Home() {
                     <div className="absolute bottom-4 left-4 font-meta text-[10px] text-gray-500">SEC: ZERO</div>
                     <div className="absolute bottom-4 right-4 font-meta text-[10px] text-gray-500">AUTH: PENDING</div>
                 </section>
-            </main>
+            </main >
 
             <footer className="border-t-system bg-cream px-4 sm:px-8 py-8 md:py-12 mt-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 font-meta text-sm uppercase">
@@ -469,7 +595,7 @@ export default function Home() {
                             <span className="font-display text-4xl tracking-tighter">
                                 C/H/R/I/S/C/E/N/T<span className="text-accent-red">✧</span>
                             </span>
-                            <p className="mt-2 text-xs text-gray-600 max-w-xs">
+                            <p className="mt-2 text-xs text-gray-600 max-w-xs scramble-text">
                                 An experimental visual design system heavily inspired by urban editorial, motion graphics, and print media paradigms.
                             </p>
                         </div>
@@ -503,7 +629,7 @@ export default function Home() {
                             href="#"
                             className="hover:bg-charcoal hover:text-ivory border border-transparent px-1 -ml-1 transition-colors"
                         >
-                            Instagram
+                            Facebook
                         </a>
                         <a
                             href="#"

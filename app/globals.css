@@ -86,6 +86,11 @@ body {
     border: var(--stroke-width) solid var(--stroke-color);
 }
 
+.border-y-system {
+    border-top: var(--stroke-width) solid var(--stroke-color);
+    border-bottom: var(--stroke-width) solid var(--stroke-color);
+}
+
 .border-b-system {
     border-bottom: var(--stroke-width) solid var(--stroke-color);
 }
@@ -177,8 +182,10 @@ body {
 .reveal-clip {
     display: block;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    transition: clip-path 2s cubic-bezier(0.77, 0, 0.175, 1);
-    will-change: clip-path;
+    transition:
+        clip-path 2s cubic-bezier(0.77, 0, 0.175, 1),
+        letter-spacing 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: clip-path, letter-spacing;
 }
 
 .reveal-clip.is-visible {
@@ -212,6 +219,100 @@ body {
     }
 }
 
+/* Horizontal Rolling Words (Primary & Secondary for continuous seamless rolling) */
+@keyframes roll-left-primary {
+
+    0%,
+    40% {
+        transform: translateX(0%) skewX(0deg);
+    }
+
+    50% {
+        transform: translateX(calc(-100% - var(--roller-gap, 2.5rem))) skewX(-45deg);
+    }
+
+    50.001% {
+        transform: translateX(calc(100% + var(--roller-gap, 2.5rem))) skewX(-45deg);
+    }
+
+    50.001%,
+    90% {
+        transform: translateX(calc(100% + var(--roller-gap, 2.5rem))) skewX(-45deg);
+    }
+
+    100% {
+        transform: translateX(0%) skewX(0deg);
+    }
+}
+
+@keyframes roll-left-secondary {
+
+    0%,
+    40% {
+        transform: translateX(calc(100% + var(--roller-gap, 2.5rem)));
+    }
+
+    50% {
+        transform: translateX(0%);
+    }
+
+    50%,
+    90% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - var(--roller-gap, 2.5rem)));
+    }
+}
+
+@keyframes roll-right-primary {
+
+    0%,
+    40% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(calc(100% + var(--roller-gap, 2.5rem)));
+    }
+
+    50.001% {
+        transform: translateX(calc(-100% - var(--roller-gap, 2.5rem)));
+    }
+
+    50.001%,
+    90% {
+        transform: translateX(calc(-100% - var(--roller-gap, 2.5rem)));
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes roll-right-secondary {
+
+    0%,
+    40% {
+        transform: translateX(calc(-100% - var(--roller-gap, 2.5rem)));
+    }
+
+    50% {
+        transform: translateX(0%);
+    }
+
+    50%,
+    90% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(calc(100% + var(--roller-gap, 2.5rem)));
+    }
+}
+
+/* Vertical Word Roller */
 .word-roller {
     display: inline-flex;
     overflow: hidden;
@@ -233,6 +334,22 @@ body {
     line-height: 1;
 }
 
+/* Horizontal Word Roller (Grid-stacked to match text bounding box automatically) */
+.word-roller-x {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    vertical-align: bottom;
+    --roller-gap: 2.5rem;
+}
+
+.word-roller-x>span {
+    grid-area: 1 / 1;
+    white-space: nowrap;
+    will-change: transform;
+}
+
 .animate-roll-up {
     animation: roll-up 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
 }
@@ -241,13 +358,31 @@ body {
     animation: roll-down 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
 }
 
+.animate-roll-left-1 {
+    animation: roll-left-primary 6s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+.animate-roll-left-2 {
+    animation: roll-left-secondary 6s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+.animate-roll-right-1 {
+    animation: roll-right-primary 4s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+.animate-roll-right-2 {
+    animation: roll-right-secondary 4s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
 /* Background Concentric Radar Rings */
 @keyframes expand-retract {
+
     0%,
     100% {
         transform: scale(0.88);
         opacity: 0.2;
     }
+
     50% {
         transform: scale(1.12);
         opacity: 0.45;
@@ -270,6 +405,109 @@ body {
     display: inline-block;
     padding-right: 2rem;
 }
+
+/* Kinetic Banner Roll Animation */
+@keyframes roll-banner-left {
+
+    0%,
+    68% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-banner-roll {
+    display: flex;
+    width: max-content;
+    animation: roll-banner-left 2.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    will-change: transform;
+}
+
+.bg-banner-gradient {
+    background: linear-gradient(90deg,
+            #bd1f0d 0%,
+            #d92c12 48%,
+            #e94c0d 70%,
+            #f28a0f 90%,
+            #e94c0d 95%,
+            #bd1f0d 100%);
+}
+
+/* Banner Diagonal Tail Mask */
+.banner-tail-mask {
+    --tail-offset: 150px;
+    --tail-spacing: 1rem;
+    --strike-width: 2rem;
+    --tail-end-gap: 14px;
+
+    -webkit-mask-image: linear-gradient(115deg,
+
+            /* First strike */
+            #000 0%,
+            #000 calc(100% - (105px + var(--tail-offset))),
+            transparent calc(100% - (105px + var(--tail-offset))),
+            transparent calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
+
+            /* Second strike */
+            #000 calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
+            #000 calc(100% - (105px - var(--strike-width) - var(--tail-spacing) + var(--tail-offset))),
+            transparent calc(100% - (105px - var(--strike-width) - var(--tail-spacing) + var(--tail-offset))),
+            transparent calc(100% - (105px - (2 * var(--strike-width)) - var(--tail-spacing) + var(--tail-offset))),
+
+            /* Third strike */
+            #000 calc(100% - (105px - (2 * var(--strike-width)) - var(--tail-spacing) + var(--tail-offset))),
+            #000 calc(100% - (105px - (2 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
+            transparent calc(100% - (105px - (2 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
+            transparent calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
+
+            /* Final tail cut */
+            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
+            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) - var(--tail-end-gap) + var(--tail-offset))),
+            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) - var(--tail-end-gap) + var(--tail-offset))),
+            #000 100%);
+
+    mask-image: linear-gradient(115deg,
+
+            #000 0%,
+            #000 calc(100% - (105px + var(--tail-offset))),
+            transparent calc(100% - (105px + var(--tail-offset))),
+            transparent calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
+
+            #000 calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
+            #000 calc(100% - (105px - var(--strike-width) - var(--tail-spacing) + var(--tail-offset))),
+            transparent calc(100% - (105px - var(--strike-width) - var(--tail-spacing) + var(--tail-offset))),
+            transparent calc(100% - (105px - (2 * var(--strike-width)) - var(--tail-spacing) + var(--tail-offset))),
+
+            #000 calc(100% - (105px - (2 * var(--strike-width)) - var(--tail-spacing) + var(--tail-offset))),
+            #000 calc(100% - (105px - (2 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
+            transparent calc(100% - (105px - (2 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
+            transparent calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
+
+            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
+            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) - var(--tail-end-gap) + var(--tail-offset))),
+            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) - var(--tail-end-gap) + var(--tail-offset))),
+            #000 100%);
+}
+
+
+@media (max-width: 750px) {
+    .banner-tail-mask {
+        --tail-offset: 30px;
+        --strike-width: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner-tail-mask {
+        --tail-offset: -25px;
+        --tail-spacing: 0.5rem;
+        --strike-width: 6px;
+    }
+}
+
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
