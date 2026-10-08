@@ -22,17 +22,16 @@ export default function Home() {
                 </div>
 
                 {/* Main Nav */}
-                <nav className="flex justify-between items-stretch h-16">
-                    {/* Logo */}
+                <nav className="flex justify-between items-stretch h-16 bg-black">
                     <a
                         href="#"
-                        className="flex items-center px-6 border-r-system font-display text-2xl tracking-tighter uppercase hover:bg-charcoal hover:text-ivory transition-colors"
+                        className="bg-ivory flex items-center px-6 border-r-system font-display text-2xl tracking-tighter uppercase hover:bg-charcoal hover:text-ivory transition-colors"
                     >
                         C/L/J/P<span className="text-accent-red animate-spin-slow ml-1">✧</span>
                     </a>
 
                     {/* Links (Desktop) */}
-                    <div className="hidden md:flex flex-1">
+                    <div className="hidden md:flex flex-1 bg-ivory">
                         <a
                             href="#overview"
                             className="flex-1 flex items-center justify-center border-r-system font-meta text-sm uppercase hover:bg-cream transition-colors"
@@ -238,22 +237,79 @@ export default function Home() {
                 </section>
 
                 {/* Overview Section */}
-                <section id="overview" className="scroll-mt-30 py-24 border-t-system relative">
+                <section id="overview" className="scroll-mt-24 py-24 border-t-system relative">
                     <div className="grid grid-cols-1 auto-rows-auto md:grid-cols-12 gap-y-12 gap-x-8">
-                        {/* Massive Number Marker */}
-                        <div className="col-span-1 md:col-span-12 xl:col-span-3 flex flex-col justify-start reveal-up">
-                            <span className="font-display text-[15vw] md:text-[8vw] leading-solid text-charcoal opacity-10">
-                                01
-                            </span>
+                        {/* Massive Number Marker & Academic Provenance */}
+                        <div className="col-span-1 md:col-span-12 xl:col-span-3 flex flex-col justify-between reveal-up gap-8">
+                            <div>
+                                <span className="font-display text-[15vw] md:text-[8vw] leading-solid text-charcoal opacity-10">
+                                    01
+                                </span>
 
-                            <h2 className="font-display text-4xl uppercase mt-2">ARCHITECTURE</h2>
-                            <div className="w-full h-2 bg-charcoal mt-4 mb-2" />
-                            <p className="font-meta text-xs uppercase">Documenting the grid collapse.</p>
+                                <h2 className="font-display text-4xl uppercase mt-2">ARCHITECTURE</h2>
+                                <div className="w-full h-2 bg-charcoal mt-4 mb-2" />
+                                <p className="font-meta text-xs uppercase text-gray-600">Personnel Record // Dossier 01</p>
+                            </div>
+
+                            {/* Academic Provenance Card */}
+                            <div className="border-system flex flex-col bg-cream p-5 shadow-solid relative font-meta">
+                                <div className="absolute top-0 right-0 bg-charcoal text-ivory text-[10px] px-2 py-0.5 uppercase tracking-wider font-bold">
+                                    ACADEMIC SPEC
+                                </div>
+                                <div className="text-[10px] uppercase text-accent-red font-bold mb-2">
+                                    [INSTITUTION]
+                                </div>
+
+                                {/* 1x1 Official School Seal Box */}
+                                <div className="sm:w-42 self-center border-system bg-white p-3 aspect-square w-full relative flex items-center justify-center overflow-hidden group mb-3 shadow-sm">
+                                    <div className="absolute top-1.5 left-2 font-meta text-[9px] text-gray-400 tracking-wider">
+                                        SEAL // IIT-OFFICIAL
+                                    </div>
+                                    <div className="absolute bottom-1.5 right-2 font-meta text-[9px] text-accent-red font-bold">
+                                        1:1 ARCHIVE
+                                    </div>
+                                    <img
+                                        src="msuiit-logo.png"
+                                        alt="Mindanao State University - Iligan Institute of Technology Official Seal"
+                                        className="w-full h-full object-contain p-2 filter drop-shadow-sm group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+
+                                <h3 className="font-display text-xl uppercase leading-tight">MSU-IIT</h3>
+                                <p className="text-xs text-gray-700 mt-1 leading-snug">
+                                    Mindanao State University - Iligan Institute of Technology
+                                </p>
+                                <p className="text-[11px] text-gray-500 mt-0.5">
+                                    College of Computer Studies
+                                </p>
+
+                                <div className="mt-4 pt-3 border-t-system border-dashed flex flex-col gap-2 text-xs">
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">DEGREE:</span>
+                                        <span className="font-bold text-charcoal">BS Computer Science</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">LANGUAGE:</span>
+                                        <span className="text-charcoal">English</span>
+                                    </div>
+                                    <div className="flex flex-col gap-1 mt-1">
+                                        <span className="text-[10px] text-gray-500 uppercase">COURSEWORK:</span>
+                                        <span className="text-[11px] font-bold text-charcoal leading-tight">
+                                            Data Structures, Algorithms, Software Eng., Info Management
+                                        </span>
+                                    </div>
+                                    <div className="flex justify-between items-center mt-1 pt-2 border-t border-gray-300">
+                                        <span className="text-gray-500 text-[10px]">STATUS:</span>
+                                        <span className="text-accent-red font-bold text-[10px]">[VERIFIED // ACCREDITED]</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        {/* Text Composition */}
-                        <div className="col-span-1 md:col-span-9 xl:col-span-6 flex flex-col gap-8 reveal-up delay-100 font-meta">
-                            <p className="text-lg leading-relaxed bg-cream p-6 border-system shadow-solid relative">
+                        {/* Middle: Summary Log & Professional Trajectory */}
+                        <div className="col-span-1 md:col-span-12 xl:col-span-6 flex flex-col gap-6 reveal-up delay-100 font-meta">
+                            {/* Log Entry Summary */}
+                            <p className="text-sm md:text-lg leading-relaxed bg-cream p-6 border-system shadow-solid relative">
                                 <span className="absolute top-0 left-0 bg-charcoal text-ivory text-xs px-2 py-1 transform -translate-y-full border-system border-b-0">
                                     LOG ENTRY
                                 </span>
@@ -265,7 +321,8 @@ export default function Home() {
                                 </span>
                             </p>
 
-                            <div className="flex gap-4 items-center">
+                            {/* Dashed Separator */}
+                            <div className="flex gap-4 items-center my-1">
                                 <div className="flex-1 border-t-system border-dashed" />
                                 <div className="w-4 h-4 rounded-full border-system flex items-center justify-center">
                                     <div className="w-1 h-1 bg-charcoal rounded-full" />
@@ -273,35 +330,171 @@ export default function Home() {
                                 <div className="flex-1 border-t-system border-dashed" />
                             </div>
 
-                            <div className="columns-1 sm:columns-2 gap-8 text-sm">
-                                <p className="mb-4 scramble-text">
-                                    Avoid generic solutions. The composition demands visual tension. Typography acts as structural elements rather than mere content delivery vehicles.
-                                </p>
-                                <p className="scramble-text">
-                                    We embrace the noise. The subtle grain of printed matter, the misalignment of registration marks. These imperfections ground the digital experience in tactile reality.
-                                </p>
+                            {/* Professional & Leadership Deployment Ledger */}
+                            <div className="flex flex-col gap-6">
+                                {/* BetterGov.ph Leadership */}
+                                <div className="border-system bg-white p-5 shadow-solid flex flex-col justify-between group hover:border-accent-blue transition-colors">
+                                    <div>
+                                        <div className="flex justify-between items-center mb-2">
+                                            <span className="bg-accent-blue text-ivory font-bold text-[10px] px-2 py-0.5 border border-charcoal uppercase">
+                                                CIVIC LEADERSHIP
+                                            </span>
+                                            <span className="text-[10px] text-gray-500 font-bold">SEP 2025 – PRESENT</span>
+                                        </div>
+
+                                        <div className="flex justify-between items-baseline flex-wrap gap-2">
+                                            <h3 className="font-display text-2xl uppercase leading-none">BetterGov.ph</h3>
+                                            <span className="text-xs text-accent-blue font-bold uppercase">
+                                                Pioneer & Core Contributor
+                                            </span>
+                                        </div>
+
+                                        <ul className="mt-3 space-y-1.5 text-sm text-gray-700 leading-normal">
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-accent-blue font-bold">▪</span>
+                                                <span className="scramble-text">
+                                                    Spearheaded the development of <strong>betteriligancity.org</strong>, providing citizens of Iligan City with transparent, accessible public information and improved digital services.
+                                                </span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-accent-blue font-bold">▪</span>
+                                                <span className="scramble-text">
+                                                    Managed organizational open-source repositories by conducting code reviews, maintaining quality standards, and ensuring smooth deployments.
+                                                </span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-accent-blue font-bold">▪</span>
+                                                <span className="scramble-text">
+                                                    Onboarded new volunteer developers, delegated tasks, and tracked issue assignments to drive continuous progress across BetterLGU initiatives.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="mt-4 pt-3 border-t-system border-dashed flex justify-between text-[10px] text-gray-500 uppercase">
+                                        <span>INITIATIVE: CIVIC TECH & OPEN DATA</span>
+                                        <span className="font-bold text-accent-red">[STATUS: ACTIVE]</span>
+                                    </div>
+                                </div>
+
+                                {/* CDIIS Experience */}
+                                <div className="border-system bg-white p-5 shadow-solid flex flex-col justify-between group hover:border-accent-mustard transition-colors">
+                                    <div>
+                                        <div className="flex justify-between items-center mb-2">
+                                            <span className="bg-accent-mustard text-charcoal font-bold text-[10px] px-2 py-0.5 border border-charcoal uppercase">
+                                                PROFESSIONAL EXP
+                                            </span>
+                                            <span className="text-[10px] text-gray-500 font-bold">JUN 2025 – JUL 2025</span>
+                                        </div>
+
+                                        <div className="flex justify-between items-baseline flex-wrap gap-2">
+                                            <h3 className="font-display text-2xl uppercase leading-none">CDIIS</h3>
+                                            <span className="text-xs text-accent-red font-bold uppercase">
+                                                On-the-Job Trainee
+                                            </span>
+                                        </div>
+                                        <p className="text-[11px] text-gray-500">Center for Digital Iligan, Innovation & Sustainability</p>
+
+                                        <ul className="mt-3 space-y-1.5 text-sm text-gray-700 leading-normal">
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-accent-mustard font-bold">▪</span>
+                                                <span className="scramble-text">
+                                                    Designed and built the administrative dashboard for the CDIIS Online Inventory Management System.
+                                                </span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-accent-mustard font-bold">▪</span>
+                                                <span className="scramble-text">
+                                                    Implemented modular React components for tracking borrower records and visualizing dynamic status.
+                                                </span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-accent-mustard font-bold">▪</span>
+                                                <span className="scramble-text">
+                                                    Modernized the UI/UX to streamline administrative workflows and improve data accessibility.
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="mt-4 pt-3 border-t-system border-dashed flex justify-between text-[10px] text-gray-500 uppercase">
+                                        <span>SYSTEM: INVENTORY & DASHBOARD UI</span>
+                                        <span className="font-bold text-charcoal">[STATUS: COMPLETED]</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        {/* Right Sidebar Graphics */}
-                        <div className="col-span-1 md:col-span-3 flex flex-col gap-4 reveal-up delay-200">
-                            <div className="border-system aspect-square bg-accent-blue relative overflow-hidden group">
+                        {/* Right: Technical Capabilities Matrix */}
+                        <div className="col-span-1 md:col-span-12 xl:col-span-3 flex flex-col gap-4 reveal-up delay-200 font-meta">
+                            {/* Graphic Visual Box */}
+                            <div className="border-system h-24 bg-accent-blue relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMODggWk04IDBMMCA4IFoiIHN0cm9rZT0iIzFBMUExOCIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg==')] opacity-50 mix-blend-multiply group-hover:scale-150 transition-transform duration-1000" />
-                                <div className="absolute inset-0 flex items-center justify-center font-display text-ivory text-3xl mix-blend-difference">
-                                    DATA_
+                                <div className="absolute inset-0 flex items-center justify-between px-4 text-ivory">
+                                    <span className="font-display text-2xl tracking-tight">SYS_MATRIX</span>
+                                    <span className="text-[10px] uppercase bg-charcoal text-ivory px-2 py-0.5 border border-ivory">
+                                        CAPABILITIES
+                                    </span>
                                 </div>
                             </div>
 
-                            {/* Data list */}
-                            <ul className="border-system bg-ivory font-meta text-xs uppercase divide-y-2 divide-charcoal">
+                            {/* Skills Stack Modules */}
+                            <div className="border-system bg-ivory divide-y-2 divide-charcoal text-xs shadow-solid">
+                                {/* Frontend Module */}
+                                <div className="p-3 bg-white hover:bg-cream transition-colors">
+                                    <div className="flex justify-between items-center text-[10px] text-gray-500 uppercase mb-1.5">
+                                        <span>01 // FRONTEND</span>
+                                        <span className="text-accent-red font-bold">[CLIENT]</span>
+                                    </div>
+                                    <div className="font-bold text-charcoal leading-tight text-xs">
+                                        React, Next.js, HTML, CSS/SCSS, JavaScript, React Query v5, Responsive Web Design
+                                    </div>
+                                </div>
+
+                                {/* Backend Module */}
+                                <div className="p-3 bg-white hover:bg-cream transition-colors">
+                                    <div className="flex justify-between items-center text-[10px] text-gray-500 uppercase mb-1.5">
+                                        <span>02 // BACKEND & DB</span>
+                                        <span className="text-accent-blue font-bold">[SERVER]</span>
+                                    </div>
+                                    <div className="font-bold text-charcoal leading-tight text-xs">
+                                        Node.js, Python, Flask, MongoDB (Data Modeling, Schema Validation), MySQL
+                                    </div>
+                                </div>
+
+                                {/* Systems & DevOps Module */}
+                                <div className="p-3 bg-white hover:bg-cream transition-colors">
+                                    <div className="flex justify-between items-center text-[10px] text-gray-500 uppercase mb-1.5">
+                                        <span>03 // INFRA & SYSTEMS</span>
+                                        <span className="text-accent-mustard font-bold">[SYSADMIN]</span>
+                                    </div>
+                                    <div className="font-bold text-charcoal leading-tight text-xs">
+                                        Linux (Fedora, CachyOS), Docker, Cloudflare Tunnels, Tailscale, GNU Stow, Bash Scripting, Neovim
+                                    </div>
+                                </div>
+
+                                {/* Core Concepts & AI Module */}
+                                <div className="p-3 bg-white hover:bg-cream transition-colors">
+                                    <div className="flex justify-between items-center text-[10px] text-gray-500 uppercase mb-1.5">
+                                        <span>04 // CORE INTEL</span>
+                                        <span className="text-charcoal font-bold">[COGNITION]</span>
+                                    </div>
+                                    <div className="font-bold text-charcoal leading-tight text-xs">
+                                        Large Language Models (LLMs), Retrieval (RAG), Vector Architectures
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* System Status Indicators */}
+                            <ul className="border-system bg-ivory font-meta text-[11px] uppercase divide-y-2 divide-charcoal">
                                 <li className="p-2 flex justify-between">
-                                    <span>Vector</span> <span>[ACTIVE]</span>
+                                    <span>OS_ENV</span> <span className="font-bold">FEDORA / CACHYOS</span>
                                 </li>
                                 <li className="p-2 flex justify-between">
-                                    <span>Raster</span> <span>[OFFLINE]</span>
+                                    <span>EDITOR</span> <span className="font-bold">NEOVIM</span>
                                 </li>
                                 <li className="p-2 flex justify-between text-accent-red font-bold">
-                                    <span>Motion</span> <span>[ENGAGED]</span>
+                                    <span>STATUS</span> <span className="animate-blink">● LOOKING FOR WORK</span>
                                 </li>
                             </ul>
                         </div>
@@ -495,7 +688,7 @@ export default function Home() {
                         {/* Item 3 */}
                         <Link
                             className="md:col-span-8 flex flex-col group reveal-up"
-                            href={"https://budgetbuddy.betteriligacity.org"}
+                            href={"https://budgetbuddy.betteriligancity.org"}
                             target="_blank"
                         >
                             <div className="border-system bg-white p-2 shadow-solid relative">
@@ -550,7 +743,7 @@ export default function Home() {
                 </section>
 
                 {/* Network Section */}
-                <section id="connect" className="py-32 relative flex flex-col items-center justify-center bg-charcoal text-ivory mt-24 border-system -mx-4 px-4 sm:-mx-8 sm:px-8 overflow-hidden crosshair-tl crosshair-br">
+                <section id="connect" className="scroll-mt-24 py-32 relative flex flex-col items-center justify-center bg-charcoal text-ivory mt-24 border-system -mx-4 px-4 sm:-mx-8 sm:px-8 overflow-hidden crosshair-tl crosshair-br">
                     {/* Graphic Background elements */}
                     <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
                         <svg
