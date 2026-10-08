@@ -82,7 +82,7 @@ export function ReachOutButton() {
                 onMouseLeave={handleMouseLeave}
                 onFocus={handleMouseEnter}
                 onBlur={handleMouseLeave}
-                className="group relative flex-1 flex items-center justify-between gap-4 bg-charcoal text-ivory border-3 border-charcoal p-4 sm:p-6 shadow-solid hover:bg-accent-red hover:text-ivory active:translate-x-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer font-meta overflow-hidden select-none"
+                className="group relative flex-1 flex items-center justify-between gap-4 bg-charcoal text-ivory border-3 border-charcoal p-4 sm:p-6 shadow-solid hover:bg-accent-red hover:text-ivory transition-all cursor-pointer font-meta overflow-hidden select-none"
                 aria-label={`Send email to ${EMAIL}`}
             >
                 {/* Visual Hazard Accent Edge on Left */}
