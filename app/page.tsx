@@ -3,6 +3,7 @@ import { RevealObserver } from "./components/RevealObserver";
 import { NetworkAuthForm } from "./components/NetworkAuthForm";
 import { AnimejsObserver } from "./components/AnimejsObserver";
 import { InitiateSequenceModal } from "./components/InitiateSequenceModal";
+import { ReachOutButton } from "./components/ReachOutButton";
 
 export default function Home() {
     return (
@@ -145,13 +146,13 @@ export default function Home() {
                             </h1>
 
                             <ul className="lg:ml-8 mt-8 mb-16 pl-1 reveal-clip max-lg:w-full pr-4">
-                                <li className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
+                                <Link href={"#contact"} className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
                                     <span className="text-accent-red font-black font-display">01</span>
                                     <div className="flex flex-col">
                                         <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">MY SOCIALS</span>
                                         <span className="text-sm mt-1">FIELD NOTE / 01</span>
                                     </div>
-                                </li>
+                                </Link>
                                 <Link href={"/chriscent_resume.pdf"} target="_blank" className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
                                     <span className="text-accent-red font-black font-display">02</span>
                                     <div className="flex flex-col">
@@ -613,11 +614,17 @@ export default function Home() {
                     className="py-24 scroll-mt-16 border-b-system relative bg-cream -mx-4 px-4 sm:-mx-8 sm:px-8"
                 >
                     <div className="flex justify-between items-end mb-12 reveal-up">
-                        <h2 className="font-display text-5xl sm:text-7xl uppercase leading-none tracking-tighter">
-                            Visual
-                            <br />
-                            Database
-                        </h2>
+                        <div className="flex flex-col gap-0">
+                            <div className="font-meta text-xs uppercase text-accent-red font-bold tracking-widest mb-2 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-accent-red animate-blink"></span>
+                                SECTION 02 // ALL MY PROJECTS
+                            </div>
+                            <h2 className="font-display text-5xl sm:text-7xl uppercase leading-none tracking-tighter">
+                                Visual
+                                <br />
+                                Database
+                            </h2>
+                        </div>
                         <div className="hidden sm:block font-meta text-right">
                             <div className="text-3xl font-bold">04</div>
                             <div className="text-xs uppercase">Items Indexed</div>
@@ -739,7 +746,7 @@ export default function Home() {
                 </section>
 
                 {/* Network Section */}
-                <section id="connect" className="scroll-mt-24 py-32 relative flex flex-col items-center justify-center bg-charcoal text-ivory mt-24 border-system -mx-4 px-4 sm:-mx-8 sm:px-8 overflow-hidden crosshair-tl crosshair-br">
+                <section id="connect" className="scroll-mt-24 py-32 relative flex flex-col items-center justify-center bg-charcoal text-ivory border-system -mx-4 px-4 sm:-mx-8 sm:px-8 overflow-hidden crosshair-tl crosshair-br">
                     {/* Graphic Background elements */}
                     <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
                         <svg
@@ -774,6 +781,180 @@ export default function Home() {
                     <div className="absolute bottom-4 left-4 font-meta text-[10px] text-gray-500">SEC: ZERO</div>
                     <div className="absolute bottom-4 right-4 font-meta text-[10px] text-gray-500">AUTH: PENDING</div>
                 </section>
+
+                {/* Contact & Comms Section */}
+                <section
+                    id="contact"
+                    className="scroll-mt-24 py-4 md:py-24 relative bg-ivory -mx-4 px-4 sm:-mx-8 sm:px-8 mt-24"
+                >
+                    {/* Section Header */}
+                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal-up border-b-system pb-6">
+                        <div>
+                            <div className="font-meta text-xs uppercase text-accent-red font-bold tracking-widest mb-2 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-accent-red animate-blink" />
+                                SECTION 03 // TRANSMISSIONS & DIRECT COMMS
+                            </div>
+                            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase leading-none tracking-tighter">
+                                Direct
+                                <br />
+                                Channels
+                            </h2>
+                        </div>
+                        <div className="mt-4 md:mt-0 font-meta text-left md:text-right">
+                            <div className="text-3xl font-bold text-accent-red">03</div>
+                            <div className="text-xs uppercase text-gray-600">Active Relays</div>
+                            <div className="text-[10px] text-gray-500 uppercase mt-1">STATUS: OPEN FOR DISPATCH</div>
+                        </div>
+                    </div>
+
+                    {/* Comms Grid */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10">
+                        {/* Left Column: Context & Transmission Status */}
+                        <div className="lg:col-span-4 flex flex-col justify-between gap-6 reveal-up">
+                            <div className="flex flex-col gap-4 font-meta">
+                                <div className="border-system bg-cream p-5 shadow-solid relative">
+                                    <div className="absolute top-0 right-0 bg-charcoal text-ivory text-[10px] px-2 py-0.5 uppercase font-bold">
+                                        SYS_ID // COMMS-01
+                                    </div>
+                                    <h3 className="font-display text-xl uppercase tracking-tight text-charcoal mb-2">
+                                        Signal Coordinates
+                                    </h3>
+                                    <p className="text-xs text-gray-700 leading-relaxed scramble-text">
+                                        Direct transmission relays and social coordinates for software engineering inquiries, civic tech collaboration, open-source initiatives, and architecture consultancy.
+                                    </p>
+                                </div>
+
+                                <div className="border-system bg-white p-4 flex flex-col gap-2.5 text-xs text-charcoal shadow-solid">
+                                    <div className="flex justify-between items-center border-b border-gray-200 pb-1.5">
+                                        <span className="text-gray-500 font-bold">RESPONSE RATE:</span>
+                                        <span className="font-bold text-accent-red">&lt; 24 HOURS</span>
+                                    </div>
+                                    <div className="flex justify-between items-center border-b border-gray-200 pb-1.5">
+                                        <span className="text-gray-500 font-bold">AVAILABILITY:</span>
+                                        <span className="font-bold text-green-700">ACTIVE // OPEN FOR WORK</span>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-gray-500 font-bold">PREFERRED COMMS:</span>
+                                        <span className="font-bold">EMAIL / LINKEDIN / FACEBOOK</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Micro Badge */}
+                            <div className="hidden lg:flex items-center gap-3 border-2 border-dashed border-charcoal/40 p-3 bg-cream/60 text-[11px] font-meta text-gray-600 uppercase">
+                                <span className="text-accent-red font-bold text-base">✦</span>
+                                <span>SECURE DISPATCH ENCRYPTED ON-DEMAND</span>
+                            </div>
+                        </div>
+
+                        {/* Right Column: Social Channels & Reach Out Button */}
+                        <div className="lg:col-span-8 flex flex-col gap-6 reveal-up delay-100">
+                            {/* 3 Social Channel Cards */}
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                {/* LinkedIn Card */}
+                                <Link
+                                    href="https://www.linkedin.com/in/chriscent-louis-june-pingol"
+                                    target="_blank"
+                                    className="group border-system bg-white p-4 shadow-solid hover:bg-navy hover:text-ivory transition-all flex flex-col justify-between gap-4 font-meta relative cursor-pointer"
+                                >
+                                    <div className="flex justify-between items-start">
+                                        <span className="text-[10px] font-bold bg-cream text-charcoal group-hover:bg-charcoal group-hover:text-ivory border border-charcoal px-1.5 py-0.5 uppercase transition-colors">
+                                            [ NET // PRO ]
+                                        </span>
+                                        <span className="text-xs group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
+                                            ↗
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div className="font-display text-xl uppercase tracking-tight">
+                                            LinkedIn
+                                        </div>
+                                        <div className="text-[11px] text-gray-600 group-hover:text-gray-300 truncate mt-1">
+                                            chriscent-louis-june-pingol
+                                        </div>
+                                    </div>
+                                    <div className="text-[9px] uppercase tracking-wider text-gray-400 group-hover:text-gray-400 border-t border-gray-200 group-hover:border-gray-600 pt-2 flex justify-between">
+                                        <span>SYS_ID: 01</span>
+                                        <span>CONNECT</span>
+                                    </div>
+                                </Link>
+
+                                {/* Facebook Card */}
+                                <Link
+                                    href="https://www.facebook.com/Perseque/"
+                                    target="_blank"
+                                    className="group border-system bg-white p-4 shadow-solid hover:bg-accent-mustard hover:text-charcoal transition-all flex flex-col justify-between gap-4 font-meta relative cursor-pointer"
+                                >
+                                    <div className="flex justify-between items-start">
+                                        <span className="text-[10px] font-bold bg-cream text-charcoal group-hover:bg-charcoal group-hover:text-ivory border border-charcoal px-1.5 py-0.5 uppercase transition-colors">
+                                            [ SOC // FEED ]
+                                        </span>
+                                        <span className="text-xs group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
+                                            ↗
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div className="font-display text-xl uppercase tracking-tight">
+                                            Facebook
+                                        </div>
+                                        <div className="text-[11px] text-gray-600 group-hover:text-charcoal truncate mt-1 font-bold">
+                                            Perseque
+                                        </div>
+                                    </div>
+                                    <div className="text-[9px] uppercase tracking-wider text-gray-400 group-hover:text-charcoal/70 border-t border-gray-200 group-hover:border-charcoal/40 pt-2 flex justify-between">
+                                        <span>SYS_ID: 02</span>
+                                        <span>FOLLOW</span>
+                                    </div>
+                                </Link>
+
+                                {/* GitHub Card */}
+                                <Link
+                                    href="https://github.com/KishonShrill"
+                                    target="_blank"
+                                    className="group border-system bg-white p-4 shadow-solid hover:bg-accent-red hover:text-ivory transition-all flex flex-col justify-between gap-4 font-meta relative cursor-pointer"
+                                >
+                                    <div className="flex justify-between items-start">
+                                        <span className="text-[10px] font-bold bg-cream text-charcoal group-hover:bg-charcoal group-hover:text-ivory border border-charcoal px-1.5 py-0.5 uppercase transition-colors">
+                                            [ DEV // REPO ]
+                                        </span>
+                                        <span className="text-xs group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
+                                            ↗
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div className="font-display text-xl uppercase tracking-tight">
+                                            GitHub
+                                        </div>
+                                        <div className="text-[11px] text-gray-600 group-hover:text-gray-200 truncate mt-1">
+                                            KishonShrill
+                                        </div>
+                                    </div>
+                                    <div className="text-[9px] uppercase tracking-wider text-gray-400 group-hover:text-gray-300 border-t border-gray-200 group-hover:border-red-400 pt-2 flex justify-between">
+                                        <span>SYS_ID: 03</span>
+                                        <span>REPOSITORIES</span>
+                                    </div>
+                                </Link>
+                            </div>
+
+                            {/* Direct Email Dispatch Panel with Anime.js Scramble Hover Button */}
+                            <div className="border-system bg-cream p-5 sm:p-6 shadow-solid flex flex-col gap-4 font-meta">
+                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-charcoal pb-3">
+                                    <div className="flex items-center gap-2">
+                                        <span className="w-2.5 h-2.5 bg-accent-red rounded-full animate-blink" />
+                                        <span className="font-bold text-xs uppercase tracking-wider text-charcoal">
+                                            DIRECT DISPATCH // SEC_ROUTE: ELECTRONIC MAIL
+                                        </span>
+                                    </div>
+                                    <span className="text-[10px] text-gray-600 uppercase">
+                                        HOVER TO DECRYPT // CLICK TO COPY & DISPATCH
+                                    </span>
+                                </div>
+
+                                <ReachOutButton />
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main >
 
             <footer className="border-t-system bg-cream px-4 sm:px-8 py-8 md:py-12 mt-auto">
@@ -794,14 +975,14 @@ export default function Home() {
                     {/* Links */}
                     <div className="flex flex-col gap-2">
                         <p className="font-bold border-b-system pb-1 mb-2">Index</p>
-                        <a href="#" className="hover:text-accent-red transition-colors flex justify-between">
-                            <span>Manifesto</span> <span className="text-gray-400">01</span>
+                        <a href="#overview" className="hover:text-accent-red transition-colors flex justify-between">
+                            <span>Overview</span> <span className="text-gray-400">01</span>
                         </a>
-                        <a href="#" className="hover:text-accent-red transition-colors flex justify-between">
-                            <span>Assets</span> <span className="text-gray-400">02</span>
+                        <a href="#database" className="hover:text-accent-red transition-colors flex justify-between">
+                            <span>Database</span> <span className="text-gray-400">02</span>
                         </a>
-                        <a href="#" className="hover:text-accent-red transition-colors flex justify-between">
-                            <span>Network</span> <span className="text-gray-400">03</span>
+                        <a href="#contact" className="hover:text-accent-red transition-colors flex justify-between">
+                            <span>Transmissions</span> <span className="text-gray-400">03</span>
                         </a>
                     </div>
 
@@ -809,19 +990,22 @@ export default function Home() {
                     <div className="flex flex-col gap-2">
                         <p className="font-bold border-b-system pb-1 mb-2">Comms</p>
                         <Link
-                            href="www.linkedin.com/in/chriscent-louis-june-pingol"
+                            href="https://www.linkedin.com/in/chriscent-louis-june-pingol"
+                            target="_blank"
                             className="hover:bg-charcoal hover:text-ivory border border-transparent px-1 -ml-1 transition-colors"
                         >
                             LinkedIn
                         </Link>
                         <Link
                             href="https://www.facebook.com/Perseque/"
+                            target="_blank"
                             className="hover:bg-charcoal hover:text-ivory border border-transparent px-1 -ml-1 transition-colors"
                         >
                             Facebook
                         </Link>
                         <Link
                             href="https://github.com/KishonShrill"
+                            target="_blank"
                             className="hover:bg-charcoal hover:text-ivory border border-transparent px-1 -ml-1 transition-colors"
                         >
                             GitHub
