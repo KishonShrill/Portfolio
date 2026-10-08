@@ -7,12 +7,12 @@ export default defineConfig({
         compatibilityDate: "2026-10-06",
         compatibilityFlags: ["nodejs_compat"],
         assets: {
-            notFoundHandling: "none"
+            notFoundHandling: "none",
         },
         env: {
             ASSETS: bindings.assets(),
             IMAGES: bindings.images(),
-            PORTFOLIO_KV_CACHE: bindings.kv()
+            PORTFOLIO_KV_CACHE: bindings.kv(),
         },
     }),
 });

@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+@import "tailwindcss";
 
 @theme {
     --color-ivory: #f4f1ea;
@@ -38,7 +38,6 @@
     }
 
     @keyframes blink {
-
         0%,
         100% {
             opacity: 1;
@@ -120,7 +119,9 @@ body {
     box-shadow: 4px 4px 0px 0px var(--stroke-color);
 }
 
-.shadow-solid:active:not(:has(button:active, a:active, [role="button"]:active)) {
+.shadow-solid:active:not(
+        :has(button:active, a:active, [role="button"]:active)
+    ) {
     transform: translate(6px, 6px);
     box-shadow: 0px 0px 0px 0px var(--stroke-color);
 }
@@ -194,7 +195,6 @@ body {
 
 /* Kinetic Rolling Words Animation */
 @keyframes roll-up {
-
     0%,
     65% {
         transform: translateY(0%);
@@ -207,7 +207,6 @@ body {
 }
 
 @keyframes roll-down {
-
     0%,
     65% {
         transform: translateY(-100%);
@@ -221,23 +220,25 @@ body {
 
 /* Horizontal Rolling Words (Primary & Secondary for continuous seamless rolling) */
 @keyframes roll-left-primary {
-
     0%,
     40% {
         transform: translateX(0%) skewX(0deg);
     }
 
     50% {
-        transform: translateX(calc(-100% - var(--roller-gap, 2.5rem))) skewX(-45deg);
+        transform: translateX(calc(-100% - var(--roller-gap, 2.5rem)))
+            skewX(-45deg);
     }
 
     50.001% {
-        transform: translateX(calc(100% + var(--roller-gap, 2.5rem))) skewX(-45deg);
+        transform: translateX(calc(100% + var(--roller-gap, 2.5rem)))
+            skewX(-45deg);
     }
 
     50.001%,
     90% {
-        transform: translateX(calc(100% + var(--roller-gap, 2.5rem))) skewX(-45deg);
+        transform: translateX(calc(100% + var(--roller-gap, 2.5rem)))
+            skewX(-45deg);
     }
 
     100% {
@@ -246,7 +247,6 @@ body {
 }
 
 @keyframes roll-left-secondary {
-
     0%,
     40% {
         transform: translateX(calc(100% + var(--roller-gap, 2.5rem)));
@@ -267,7 +267,6 @@ body {
 }
 
 @keyframes roll-right-primary {
-
     0%,
     40% {
         transform: translateX(0%);
@@ -292,7 +291,6 @@ body {
 }
 
 @keyframes roll-right-secondary {
-
     0%,
     40% {
         transform: translateX(calc(-100% - var(--roller-gap, 2.5rem)));
@@ -327,7 +325,7 @@ body {
     will-change: transform;
 }
 
-.word-roller-inner>span {
+.word-roller-inner > span {
     display: flex;
     align-items: center;
     height: 1em;
@@ -344,7 +342,7 @@ body {
     --roller-gap: 2.5rem;
 }
 
-.word-roller-x>span {
+.word-roller-x > span {
     grid-area: 1 / 1;
     white-space: nowrap;
     will-change: transform;
@@ -376,7 +374,6 @@ body {
 
 /* Background Concentric Radar Rings */
 @keyframes expand-retract {
-
     0%,
     100% {
         transform: scale(0.88);
@@ -408,7 +405,6 @@ body {
 
 /* Kinetic Banner Roll Animation */
 @keyframes roll-banner-left {
-
     0%,
     68% {
         transform: translateX(0%);
@@ -427,13 +423,15 @@ body {
 }
 
 .bg-banner-gradient {
-    background: linear-gradient(90deg,
-            #bd1f0d 0%,
-            #d92c12 48%,
-            #e94c0d 70%,
-            #f28a0f 90%,
-            #e94c0d 95%,
-            #bd1f0d 100%);
+    background: linear-gradient(
+        90deg,
+        #bd1f0d 0%,
+        #d92c12 48%,
+        #e94c0d 70%,
+        #f28a0f 90%,
+        #e94c0d 95%,
+        #bd1f0d 100%
+    );
 }
 
 /* Banner Diagonal Tail Mask */
@@ -443,55 +441,193 @@ body {
     --strike-width: 2rem;
     --tail-end-gap: 14px;
 
-    -webkit-mask-image: linear-gradient(115deg,
+    -webkit-mask-image: linear-gradient(
+        115deg,
+        /* First strike */ #000 0%,
+        #000 calc(100% - (105px + var(--tail-offset))),
+        transparent calc(100% - (105px + var(--tail-offset))),
+        transparent
+            calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
+        /* Second strike */ #000
+            calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
+        #000
+            calc(
+                100% -
+                    (
+                        105px - var(--strike-width) - var(--tail-spacing) +
+                            var(--tail-offset)
+                    )
+            ),
+        transparent
+            calc(
+                100% -
+                    (
+                        105px - var(--strike-width) - var(--tail-spacing) +
+                            var(--tail-offset)
+                    )
+            ),
+        transparent
+            calc(
+                100% -
+                    (
+                        105px - (2 * var(--strike-width)) -
+                            var(--tail-spacing) + var(--tail-offset)
+                    )
+            ),
+        /* Third strike */ #000
+            calc(
+                100% -
+                    (
+                        105px - (2 * var(--strike-width)) -
+                            var(--tail-spacing) + var(--tail-offset)
+                    )
+            ),
+        #000
+            calc(
+                100% -
+                    (
+                        105px - (2 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) + var(--tail-offset)
+                    )
+            ),
+        transparent
+            calc(
+                100% -
+                    (
+                        105px - (2 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) + var(--tail-offset)
+                    )
+            ),
+        transparent
+            calc(
+                100% -
+                    (
+                        105px - (3 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) + var(--tail-offset)
+                    )
+            ),
+        /* Final tail cut */ #000
+            calc(
+                100% -
+                    (
+                        105px - (3 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) + var(--tail-offset)
+                    )
+            ),
+        #000
+            calc(
+                100% -
+                    (
+                        105px - (3 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) - var(--tail-end-gap) +
+                            var(--tail-offset)
+                    )
+            ),
+        #000
+            calc(
+                100% -
+                    (
+                        105px - (3 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) - var(--tail-end-gap) +
+                            var(--tail-offset)
+                    )
+            ),
+        #000 100%
+    );
 
-            /* First strike */
-            #000 0%,
-            #000 calc(100% - (105px + var(--tail-offset))),
-            transparent calc(100% - (105px + var(--tail-offset))),
-            transparent calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
-
-            /* Second strike */
-            #000 calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
-            #000 calc(100% - (105px - var(--strike-width) - var(--tail-spacing) + var(--tail-offset))),
-            transparent calc(100% - (105px - var(--strike-width) - var(--tail-spacing) + var(--tail-offset))),
-            transparent calc(100% - (105px - (2 * var(--strike-width)) - var(--tail-spacing) + var(--tail-offset))),
-
-            /* Third strike */
-            #000 calc(100% - (105px - (2 * var(--strike-width)) - var(--tail-spacing) + var(--tail-offset))),
-            #000 calc(100% - (105px - (2 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
-            transparent calc(100% - (105px - (2 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
-            transparent calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
-
-            /* Final tail cut */
-            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
-            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) - var(--tail-end-gap) + var(--tail-offset))),
-            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) - var(--tail-end-gap) + var(--tail-offset))),
-            #000 100%);
-
-    mask-image: linear-gradient(115deg,
-
-            #000 0%,
-            #000 calc(100% - (105px + var(--tail-offset))),
-            transparent calc(100% - (105px + var(--tail-offset))),
-            transparent calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
-
-            #000 calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
-            #000 calc(100% - (105px - var(--strike-width) - var(--tail-spacing) + var(--tail-offset))),
-            transparent calc(100% - (105px - var(--strike-width) - var(--tail-spacing) + var(--tail-offset))),
-            transparent calc(100% - (105px - (2 * var(--strike-width)) - var(--tail-spacing) + var(--tail-offset))),
-
-            #000 calc(100% - (105px - (2 * var(--strike-width)) - var(--tail-spacing) + var(--tail-offset))),
-            #000 calc(100% - (105px - (2 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
-            transparent calc(100% - (105px - (2 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
-            transparent calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
-
-            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) + var(--tail-offset))),
-            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) - var(--tail-end-gap) + var(--tail-offset))),
-            #000 calc(100% - (105px - (3 * var(--strike-width)) - (2 * var(--tail-spacing)) - var(--tail-end-gap) + var(--tail-offset))),
-            #000 100%);
+    mask-image: linear-gradient(
+        115deg,
+        #000 0%,
+        #000 calc(100% - (105px + var(--tail-offset))),
+        transparent calc(100% - (105px + var(--tail-offset))),
+        transparent
+            calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
+        #000 calc(100% - (105px - var(--strike-width) + var(--tail-offset))),
+        #000
+            calc(
+                100% -
+                    (
+                        105px - var(--strike-width) - var(--tail-spacing) +
+                            var(--tail-offset)
+                    )
+            ),
+        transparent
+            calc(
+                100% -
+                    (
+                        105px - var(--strike-width) - var(--tail-spacing) +
+                            var(--tail-offset)
+                    )
+            ),
+        transparent
+            calc(
+                100% -
+                    (
+                        105px - (2 * var(--strike-width)) -
+                            var(--tail-spacing) + var(--tail-offset)
+                    )
+            ),
+        #000
+            calc(
+                100% -
+                    (
+                        105px - (2 * var(--strike-width)) -
+                            var(--tail-spacing) + var(--tail-offset)
+                    )
+            ),
+        #000
+            calc(
+                100% -
+                    (
+                        105px - (2 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) + var(--tail-offset)
+                    )
+            ),
+        transparent
+            calc(
+                100% -
+                    (
+                        105px - (2 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) + var(--tail-offset)
+                    )
+            ),
+        transparent
+            calc(
+                100% -
+                    (
+                        105px - (3 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) + var(--tail-offset)
+                    )
+            ),
+        #000
+            calc(
+                100% -
+                    (
+                        105px - (3 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) + var(--tail-offset)
+                    )
+            ),
+        #000
+            calc(
+                100% -
+                    (
+                        105px - (3 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) - var(--tail-end-gap) +
+                            var(--tail-offset)
+                    )
+            ),
+        #000
+            calc(
+                100% -
+                    (
+                        105px - (3 * var(--strike-width)) -
+                            (2 * var(--tail-spacing)) - var(--tail-end-gap) +
+                            var(--tail-offset)
+                    )
+            ),
+        #000 100%
+    );
 }
-
 
 @media (max-width: 750px) {
     .banner-tail-mask {
@@ -507,7 +643,6 @@ body {
         --strike-width: 6px;
     }
 }
-
 
 /* Under Construction Hazard Patterns */
 .pattern-hazard-mustard {

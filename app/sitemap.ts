@@ -3,9 +3,7 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://chriscent.is-a.dev";
 
-    const routes = [
-        { path: "", freq: "monthly", prio: 1 },
-    ] as const;
+    const routes = [{ path: "", freq: "monthly", prio: 1 }] as const;
 
     const lastModified = new Date();
 
@@ -19,4 +17,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return staticRoutes;
 }
-

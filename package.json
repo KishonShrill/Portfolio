@@ -7,6 +7,7 @@
         "animejs": "^4.5.0",
         "clsx": "^2.1.1",
         "neverthrow": "^8.2.0",
+        "nitro": "^3.0.260903-beta",
         "react": "latest",
         "react-dom": "latest",
         "react-server-dom-webpack": "^19.3.0",
@@ -18,6 +19,7 @@
         "@commitlint/cli": "^21.0.1",
         "@commitlint/config-conventional": "^21.0.1",
         "@tailwindcss/postcss": "latest",
+        "@tailwindcss/vite": "^4.3.3",
         "@types/node": "latest",
         "@types/react": "latest",
         "@types/react-dom": "latest",
@@ -26,6 +28,7 @@
         "cf": "^1.0.0-beta.12",
         "husky": "^9.1.7",
         "lint-staged": "^17.6.0",
+        "prettier": "^3.9.9",
         "tailwindcss": "latest",
         "typescript": "latest",
         "vite": "^8.3.2",
@@ -40,14 +43,10 @@
     "type": "module",
     "scripts": {
         "dev": "vite dev --host 0.0.0.0 --port 3000",
-        "dev:start": "wrangler dev --ip 0.0.0.0 --port 3000 --config dist/server/wrangler.json",
-        "prebuild": "npm run cf-typegen",
         "build": "vite build",
         "start": "vite preview",
-        "deploy": "vinext-cloudflare deploy --config dist/server/wrangler.json",
-        "prepare": "husky",
-        "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
         "format": "prettier --write .",
-        "format:check": "prettier --check ."
+        "format:check": "prettier --check .",
+        "prepare": "husky"
     }
 }

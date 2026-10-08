@@ -8,10 +8,11 @@
 # testing
 /coverage
 
-# next.js / vinext
+# next.js / vinext / nitro
 /.next/
 /out/
 /dist/
+.output/
 .vinext/
 .cloudflare/
 

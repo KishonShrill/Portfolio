@@ -16,9 +16,12 @@ export default function Home() {
                 <div className="select-none flex justify-between items-center px-4 py-2 border-b-system font-meta text-xs uppercase bg-cream">
                     <div className="flex gap-4">
                         <span className="flex items-center gap-1">
-                            <span className="w-2 h-2 bg-accent-red rounded-full animate-blink" /> SYS.ONLINE
+                            <span className="w-2 h-2 bg-accent-red rounded-full animate-blink" />{" "}
+                            SYS.ONLINE
                         </span>
-                        <span className="hidden sm:inline">LAT: 35.6762° N // LONG: 139.6503° E</span>
+                        <span className="hidden sm:inline">
+                            LAT: 35.6762° N // LONG: 139.6503° E
+                        </span>
                     </div>
                     <div>VER. 2.4.9</div>
                 </div>
@@ -29,7 +32,10 @@ export default function Home() {
                         href="#"
                         className="bg-ivory flex items-center px-6 border-r-system font-display text-2xl tracking-tighter uppercase hover:bg-charcoal hover:text-ivory transition-colors"
                     >
-                        C/L/J/P<span className="text-accent-red animate-spin-slow ml-1">✧</span>
+                        C/L/J/P
+                        <span className="text-accent-red animate-spin-slow ml-1">
+                            ✧
+                        </span>
                     </a>
 
                     {/* Links (Desktop) */}
@@ -68,13 +74,28 @@ export default function Home() {
                 <div className="border-t-system bg-accent-mustard text-charcoal font-meta text-xs uppercase py-1 overflow-hidden">
                     <div className="ticker-container w-full select-none">
                         <div className="animate-marquee ticker-content">
-                            /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE{" "}
+                            /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY
+                            OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN
+                            SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE ///
+                            EXPERIMENTAL PROTOCOL ACTIVE{" "}
                         </div>
-                        <div className="animate-marquee ticker-content" aria-hidden="true">
-                            /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE{" "}
+                        <div
+                            className="animate-marquee ticker-content"
+                            aria-hidden="true"
+                        >
+                            /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY
+                            OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN
+                            SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE ///
+                            EXPERIMENTAL PROTOCOL ACTIVE{" "}
                         </div>
-                        <div className="animate-marquee ticker-content" aria-hidden="true">
-                            /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE{" "}
+                        <div
+                            className="animate-marquee ticker-content"
+                            aria-hidden="true"
+                        >
+                            /// DESIGN SYSTEM ENGAGED /// VISUAL HIERARCHY
+                            OVERRIDE /// EXPERIMENTAL PROTOCOL ACTIVE /// DESIGN
+                            SYSTEM ENGAGED /// VISUAL HIERARCHY OVERRIDE ///
+                            EXPERIMENTAL PROTOCOL ACTIVE{" "}
                         </div>
                     </div>
                 </div>
@@ -108,7 +129,11 @@ export default function Home() {
                         {/* Left: Massive Typography */}
                         <div className="h-full col-span-1 lg:col-span-7 flex flex-col items-start relative crosshair-tl crosshair-br p-4 sm:p-0">
                             <div className="select-none font-meta text-sm uppercase border-system px-3 py-1 mb-4 lg:mb-6 inline-flex items-center gap-2 bg-cream shadow-solid">
-                                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                                <svg
+                                    className="w-3 h-3"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
                                     <path d="M12 0C12 6.62742 6.62742 12 0 12C6.62742 12 12 17.3726 12 24C12 17.3726 17.3726 12 24 12C17.3726 12 12 6.62742 12 0Z" />
                                 </svg>
                                 Terminal Protocol
@@ -138,7 +163,9 @@ export default function Home() {
                                     </span>
                                     <span className="word-roller">
                                         <span className="word-roller-inner animate-roll-down">
-                                            <span aria-hidden="true">TALKING.</span>
+                                            <span aria-hidden="true">
+                                                TALKING.
+                                            </span>
                                             <span>TALKING.</span>
                                         </span>
                                     </span>
@@ -146,25 +173,55 @@ export default function Home() {
                             </h1>
 
                             <ul className="lg:ml-8 mt-8 mb-16 pl-1 reveal-clip max-lg:w-full pr-4">
-                                <Link href={"#contact"} className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
-                                    <span className="text-accent-red font-black font-display">01</span>
+                                <Link
+                                    href={"#contact"}
+                                    className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer"
+                                >
+                                    <span className="text-accent-red font-black font-display">
+                                        01
+                                    </span>
                                     <div className="flex flex-col">
-                                        <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">MY SOCIALS</span>
-                                        <span className="text-sm mt-1">FIELD NOTE / 01</span>
+                                        <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">
+                                            MY SOCIALS
+                                        </span>
+                                        <span className="text-sm mt-1">
+                                            FIELD NOTE / 01
+                                        </span>
                                     </div>
                                 </Link>
-                                <Link href={"/chriscent_resume.pdf"} target="_blank" className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
-                                    <span className="text-accent-red font-black font-display">02</span>
+                                <Link
+                                    href={"/chriscent_resume.pdf"}
+                                    target="_blank"
+                                    className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer"
+                                >
+                                    <span className="text-accent-red font-black font-display">
+                                        02
+                                    </span>
                                     <div className="flex flex-col">
-                                        <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">RESUME</span>
-                                        <span className="text-sm mt-1">FIELD NOTE / 02</span>
+                                        <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">
+                                            RESUME
+                                        </span>
+                                        <span className="text-sm mt-1">
+                                            FIELD NOTE / 02
+                                        </span>
                                     </div>
                                 </Link>
-                                <Link href={"/chriscent_resume.pdf"} target="_blank" download className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer">
-                                    <span className="text-accent-red font-black font-display">03</span>
+                                <Link
+                                    href={"/chriscent_resume.pdf"}
+                                    target="_blank"
+                                    download
+                                    className="flex gap-8 py-4 border-b border-accent-red group cursor-pointer"
+                                >
+                                    <span className="text-accent-red font-black font-display">
+                                        03
+                                    </span>
                                     <div className="flex flex-col">
-                                        <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">DOWNLOAD</span>
-                                        <span className="text-sm mt-1">FIELD NOTE / 03</span>
+                                        <span className="text-4xl font-light font-meta leading-none group-hover:text-accent-red group-hover:translate-x-4 transition-transform">
+                                            DOWNLOAD
+                                        </span>
+                                        <span className="text-sm mt-1">
+                                            FIELD NOTE / 03
+                                        </span>
                                     </div>
                                 </Link>
                             </ul>
@@ -176,12 +233,20 @@ export default function Home() {
                                 <div className="mt-4 max-w-lg w-full border-t-system pt-4 reveal-up delay-300">
                                     <div className="grid grid-cols-2 gap-4">
                                         <div>
-                                            <p className="font-meta text-xs text-gray-500 uppercase">Input Node</p>
-                                            <p className="font-meta font-bold scramble-text">A-77.X</p>
+                                            <p className="font-meta text-xs text-gray-500 uppercase">
+                                                Input Node
+                                            </p>
+                                            <p className="font-meta font-bold scramble-text">
+                                                A-77.X
+                                            </p>
                                         </div>
                                         <div>
-                                            <p className="font-meta text-xs text-gray-500 uppercase">Status</p>
-                                            <p className="font-meta font-bold scramble-text">AWAITING COMMAND</p>
+                                            <p className="font-meta text-xs text-gray-500 uppercase">
+                                                Status
+                                            </p>
+                                            <p className="font-meta font-bold scramble-text">
+                                                AWAITING COMMAND
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -220,7 +285,10 @@ export default function Home() {
                                     <div className="mt-2 flex justify-between items-center font-meta text-xs uppercase border-t-system pt-2">
                                         <span>Sector 4 Environment</span>
                                         <span className="flex items-center gap-1">
-                                            View <span className="text-xl leading-none">→</span>
+                                            View{" "}
+                                            <span className="text-xl leading-none">
+                                                →
+                                            </span>
                                         </span>
                                     </div>
                                 </div>
@@ -239,7 +307,10 @@ export default function Home() {
                 </section>
 
                 {/* Overview Section */}
-                <section id="overview" className="scroll-mt-24 py-24 border-t-system relative">
+                <section
+                    id="overview"
+                    className="scroll-mt-24 py-24 border-t-system relative"
+                >
                     <div className="grid grid-cols-1 auto-rows-auto md:grid-cols-12 gap-y-12 gap-x-8">
                         {/* Massive Number Marker & Academic Provenance */}
                         <div className="col-span-1 md:col-span-12 xl:col-span-3 flex flex-col justify-between reveal-up gap-8">
@@ -248,9 +319,13 @@ export default function Home() {
                                     01
                                 </span>
 
-                                <h2 className="font-display text-4xl uppercase mt-2">ARCHITECTURE</h2>
+                                <h2 className="font-display text-4xl uppercase mt-2">
+                                    ARCHITECTURE
+                                </h2>
                                 <div className="w-full h-2 bg-charcoal mt-4 mb-2" />
-                                <p className="font-meta text-xs uppercase text-gray-600">Personnel Record // Dossier 01</p>
+                                <p className="font-meta text-xs uppercase text-gray-600">
+                                    Personnel Record // Dossier 01
+                                </p>
                             </div>
 
                             {/* Academic Provenance Card */}
@@ -277,9 +352,12 @@ export default function Home() {
                                     />
                                 </div>
 
-                                <h3 className="font-display text-xl uppercase leading-tight">MSU-IIT</h3>
+                                <h3 className="font-display text-xl uppercase leading-tight">
+                                    MSU-IIT
+                                </h3>
                                 <p className="text-xs text-gray-700 mt-1 leading-snug">
-                                    Mindanao State University - Iligan Institute of Technology
+                                    Mindanao State University - Iligan Institute
+                                    of Technology
                                 </p>
                                 <p className="text-[11px] text-gray-500 mt-0.5">
                                     College of Computer Studies
@@ -287,22 +365,37 @@ export default function Home() {
 
                                 <div className="mt-4 pt-3 border-t-system border-dashed flex flex-col gap-2 text-xs">
                                     <div className="flex justify-between">
-                                        <span className="text-gray-500">DEGREE:</span>
-                                        <span className="font-bold text-charcoal">BS Computer Science</span>
+                                        <span className="text-gray-500">
+                                            DEGREE:
+                                        </span>
+                                        <span className="font-bold text-charcoal">
+                                            BS Computer Science
+                                        </span>
                                     </div>
                                     <div className="flex justify-between">
-                                        <span className="text-gray-500">LANGUAGE:</span>
-                                        <span className="text-charcoal">English</span>
+                                        <span className="text-gray-500">
+                                            LANGUAGE:
+                                        </span>
+                                        <span className="text-charcoal">
+                                            English
+                                        </span>
                                     </div>
                                     <div className="flex flex-col gap-1 mt-1">
-                                        <span className="text-[10px] text-gray-500 uppercase">COURSEWORK:</span>
+                                        <span className="text-[10px] text-gray-500 uppercase">
+                                            COURSEWORK:
+                                        </span>
                                         <span className="text-[11px] font-bold text-charcoal leading-tight">
-                                            Data Structures, Algorithms, Software Eng., Info Management
+                                            Data Structures, Algorithms,
+                                            Software Eng., Info Management
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center mt-1 pt-2 border-t border-gray-300">
-                                        <span className="text-gray-500 text-[10px]">STATUS:</span>
-                                        <span className="text-accent-red font-bold text-[10px]">[VERIFIED // ACCREDITED]</span>
+                                        <span className="text-gray-500 text-[10px]">
+                                            STATUS:
+                                        </span>
+                                        <span className="text-accent-red font-bold text-[10px]">
+                                            [VERIFIED // ACCREDITED]
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -316,10 +409,15 @@ export default function Home() {
                                     LOG ENTRY
                                 </span>
                                 <span className="scramble-text">
-                                    A Full-Stack Web Developer and Researcher with hands-on experience building responsive web applications,
-                                    civic tech platforms, and AI-driven systems. Proficient in React, Next.js, Python, and MongoDB. Passionate about
-                                    clean UI/UX, open-source collaboration, and leveraging technology to improve public services and solve
-                                    real-world problems.
+                                    A Full-Stack Web Developer and Researcher
+                                    with hands-on experience building responsive
+                                    web applications, civic tech platforms, and
+                                    AI-driven systems. Proficient in React,
+                                    Next.js, Python, and MongoDB. Passionate
+                                    about clean UI/UX, open-source
+                                    collaboration, and leveraging technology to
+                                    improve public services and solve real-world
+                                    problems.
                                 </span>
                             </p>
 
@@ -341,11 +439,15 @@ export default function Home() {
                                             <span className="bg-accent-blue text-ivory font-bold text-[10px] px-2 py-0.5 border border-charcoal uppercase">
                                                 CIVIC LEADERSHIP
                                             </span>
-                                            <span className="text-[10px] text-gray-500 font-bold">SEP 2025 – PRESENT</span>
+                                            <span className="text-[10px] text-gray-500 font-bold">
+                                                SEP 2025 – PRESENT
+                                            </span>
                                         </div>
 
                                         <div className="flex justify-between items-baseline flex-wrap gap-2">
-                                            <h3 className="font-display text-2xl uppercase leading-none">BetterGov.ph</h3>
+                                            <h3 className="font-display text-2xl uppercase leading-none">
+                                                BetterGov.ph
+                                            </h3>
                                             <span className="text-xs text-accent-blue font-bold uppercase">
                                                 Pioneer & Core Contributor
                                             </span>
@@ -353,29 +455,66 @@ export default function Home() {
 
                                         <ul className="mt-3 space-y-1.5 text-sm text-gray-700 leading-normal select-none">
                                             <li className="flex items-start gap-2">
-                                                <span className="text-accent-blue font-bold">▪</span>
+                                                <span className="text-accent-blue font-bold">
+                                                    ▪
+                                                </span>
                                                 <span className="scramble-text">
-                                                    Spearheaded the development of <Link className="select-auto hover:text-orange-500 hover:underline" href={"https://betteriligancity.org"} target="_blank"><strong>betteriligancity.org</strong></Link>, providing citizens of Iligan City with transparent, accessible public information and improved digital services.
+                                                    Spearheaded the development
+                                                    of{" "}
+                                                    <Link
+                                                        className="select-auto hover:text-orange-500 hover:underline"
+                                                        href={
+                                                            "https://betteriligancity.org"
+                                                        }
+                                                        target="_blank"
+                                                    >
+                                                        <strong>
+                                                            betteriligancity.org
+                                                        </strong>
+                                                    </Link>
+                                                    , providing citizens of
+                                                    Iligan City with
+                                                    transparent, accessible
+                                                    public information and
+                                                    improved digital services.
                                                 </span>
                                             </li>
                                             <li className="flex items-start gap-2">
-                                                <span className="text-accent-blue font-bold">▪</span>
+                                                <span className="text-accent-blue font-bold">
+                                                    ▪
+                                                </span>
                                                 <span className="scramble-text">
-                                                    Managed organizational open-source repositories by conducting code reviews, maintaining quality standards, and ensuring smooth deployments.
+                                                    Managed organizational
+                                                    open-source repositories by
+                                                    conducting code reviews,
+                                                    maintaining quality
+                                                    standards, and ensuring
+                                                    smooth deployments.
                                                 </span>
                                             </li>
                                             <li className="flex items-start gap-2">
-                                                <span className="text-accent-blue font-bold">▪</span>
+                                                <span className="text-accent-blue font-bold">
+                                                    ▪
+                                                </span>
                                                 <span className="scramble-text">
-                                                    Onboarded new volunteer developers, delegated tasks, and tracked issue assignments to drive continuous progress across BetterLGU initiatives.
+                                                    Onboarded new volunteer
+                                                    developers, delegated tasks,
+                                                    and tracked issue
+                                                    assignments to drive
+                                                    continuous progress across
+                                                    BetterLGU initiatives.
                                                 </span>
                                             </li>
                                         </ul>
                                     </div>
 
                                     <div className="mt-4 pt-3 border-t-system border-dashed flex justify-between text-[10px] text-gray-500 uppercase">
-                                        <span>INITIATIVE: CIVIC TECH & OPEN DATA</span>
-                                        <span className="font-bold text-accent-red">[STATUS: ACTIVE]</span>
+                                        <span>
+                                            INITIATIVE: CIVIC TECH & OPEN DATA
+                                        </span>
+                                        <span className="font-bold text-accent-red">
+                                            [STATUS: ACTIVE]
+                                        </span>
                                     </div>
                                 </div>
 
@@ -386,42 +525,68 @@ export default function Home() {
                                             <span className="bg-accent-mustard text-charcoal font-bold text-[10px] px-2 py-0.5 border border-charcoal uppercase">
                                                 PROFESSIONAL EXP
                                             </span>
-                                            <span className="text-[10px] text-gray-500 font-bold">JUN 2025 – JUL 2025</span>
+                                            <span className="text-[10px] text-gray-500 font-bold">
+                                                JUN 2025 – JUL 2025
+                                            </span>
                                         </div>
 
                                         <div className="flex justify-between items-baseline flex-wrap gap-2">
-                                            <h3 className="font-display text-2xl uppercase leading-none">CDIIS</h3>
+                                            <h3 className="font-display text-2xl uppercase leading-none">
+                                                CDIIS
+                                            </h3>
                                             <span className="text-xs text-accent-red font-bold uppercase">
                                                 On-the-Job Trainee
                                             </span>
                                         </div>
-                                        <p className="text-[11px] text-gray-500">Center for Digital Iligan, Innovation & Sustainability</p>
+                                        <p className="text-[11px] text-gray-500">
+                                            Center for Digital Iligan,
+                                            Innovation & Sustainability
+                                        </p>
 
                                         <ul className="mt-3 space-y-1.5 text-sm text-gray-700 leading-normal select-none">
                                             <li className="flex items-start gap-2">
-                                                <span className="text-accent-mustard font-bold">▪</span>
+                                                <span className="text-accent-mustard font-bold">
+                                                    ▪
+                                                </span>
                                                 <span className="scramble-text">
-                                                    Designed and built the administrative dashboard for the CDIIS Online Inventory Management System.
+                                                    Designed and built the
+                                                    administrative dashboard for
+                                                    the CDIIS Online Inventory
+                                                    Management System.
                                                 </span>
                                             </li>
                                             <li className="flex items-start gap-2">
-                                                <span className="text-accent-mustard font-bold">▪</span>
+                                                <span className="text-accent-mustard font-bold">
+                                                    ▪
+                                                </span>
                                                 <span className="scramble-text">
-                                                    Implemented modular React components for tracking borrower records and visualizing dynamic status.
+                                                    Implemented modular React
+                                                    components for tracking
+                                                    borrower records and
+                                                    visualizing dynamic status.
                                                 </span>
                                             </li>
                                             <li className="flex items-start gap-2">
-                                                <span className="text-accent-mustard font-bold">▪</span>
+                                                <span className="text-accent-mustard font-bold">
+                                                    ▪
+                                                </span>
                                                 <span className="scramble-text">
-                                                    Modernized the UI/UX to streamline administrative workflows and improve data accessibility.
+                                                    Modernized the UI/UX to
+                                                    streamline administrative
+                                                    workflows and improve data
+                                                    accessibility.
                                                 </span>
                                             </li>
                                         </ul>
                                     </div>
 
                                     <div className="mt-4 pt-3 border-t-system border-dashed flex justify-between text-[10px] text-gray-500 uppercase">
-                                        <span>SYSTEM: INVENTORY & DASHBOARD UI</span>
-                                        <span className="font-bold text-charcoal">[STATUS: COMPLETED]</span>
+                                        <span>
+                                            SYSTEM: INVENTORY & DASHBOARD UI
+                                        </span>
+                                        <span className="font-bold text-charcoal">
+                                            [STATUS: COMPLETED]
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -433,7 +598,9 @@ export default function Home() {
                             <div className="border-system h-24 bg-accent-blue relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMODggWk04IDBMMCA4IFoiIHN0cm9rZT0iIzFBMUExOCIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg==')] opacity-50 mix-blend-multiply group-hover:scale-150 transition-transform duration-1000" />
                                 <div className="absolute inset-0 flex items-center justify-between px-4 text-ivory">
-                                    <span className="font-display text-2xl tracking-tight">SYS_MATRIX</span>
+                                    <span className="font-display text-2xl tracking-tight">
+                                        SYS_MATRIX
+                                    </span>
                                     <span className="text-[10px] uppercase bg-charcoal text-ivory px-2 py-0.5 border border-ivory">
                                         CAPABILITIES
                                     </span>
@@ -446,10 +613,14 @@ export default function Home() {
                                 <div className="p-3 bg-white hover:bg-cream transition-colors">
                                     <div className="flex justify-between items-center text-[10px] text-gray-500 uppercase mb-1.5">
                                         <span>01 // FRONTEND</span>
-                                        <span className="text-accent-red font-bold">[CLIENT]</span>
+                                        <span className="text-accent-red font-bold">
+                                            [CLIENT]
+                                        </span>
                                     </div>
                                     <div className="font-bold text-charcoal leading-tight text-xs">
-                                        React, Next.js, HTML, CSS/SCSS, JavaScript, React Query v5, Responsive Web Design
+                                        React, Next.js, HTML, CSS/SCSS,
+                                        JavaScript, React Query v5, Responsive
+                                        Web Design
                                     </div>
                                 </div>
 
@@ -457,10 +628,13 @@ export default function Home() {
                                 <div className="p-3 bg-white hover:bg-cream transition-colors">
                                     <div className="flex justify-between items-center text-[10px] text-gray-500 uppercase mb-1.5">
                                         <span>02 // BACKEND & DB</span>
-                                        <span className="text-accent-blue font-bold">[SERVER]</span>
+                                        <span className="text-accent-blue font-bold">
+                                            [SERVER]
+                                        </span>
                                     </div>
                                     <div className="font-bold text-charcoal leading-tight text-xs">
-                                        Node.js, Python, Flask, MongoDB (Data Modeling, Schema Validation), MySQL
+                                        Node.js, Python, Flask, MongoDB (Data
+                                        Modeling, Schema Validation), MySQL
                                     </div>
                                 </div>
 
@@ -468,10 +642,14 @@ export default function Home() {
                                 <div className="p-3 bg-white hover:bg-cream transition-colors">
                                     <div className="flex justify-between items-center text-[10px] text-gray-500 uppercase mb-1.5">
                                         <span>03 // INFRA & SYSTEMS</span>
-                                        <span className="text-accent-mustard font-bold">[SYSADMIN]</span>
+                                        <span className="text-accent-mustard font-bold">
+                                            [SYSADMIN]
+                                        </span>
                                     </div>
                                     <div className="font-bold text-charcoal leading-tight text-xs">
-                                        Linux (Fedora, CachyOS), Docker, Cloudflare Tunnels, Tailscale, GNU Stow, Bash Scripting, Neovim
+                                        Linux (Fedora, CachyOS), Docker,
+                                        Cloudflare Tunnels, Tailscale, GNU Stow,
+                                        Bash Scripting, Neovim
                                     </div>
                                 </div>
 
@@ -479,10 +657,13 @@ export default function Home() {
                                 <div className="p-3 bg-white hover:bg-cream transition-colors">
                                     <div className="flex justify-between items-center text-[10px] text-gray-500 uppercase mb-1.5">
                                         <span>04 // CORE INTEL</span>
-                                        <span className="text-charcoal font-bold">[COGNITION]</span>
+                                        <span className="text-charcoal font-bold">
+                                            [COGNITION]
+                                        </span>
                                     </div>
                                     <div className="font-bold text-charcoal leading-tight text-xs">
-                                        Large Language Models (LLMs), Retrieval (RAG), Vector Architectures
+                                        Large Language Models (LLMs), Retrieval
+                                        (RAG), Vector Architectures
                                     </div>
                                 </div>
                             </div>
@@ -490,13 +671,20 @@ export default function Home() {
                             {/* System Status Indicators */}
                             <ul className="border-system bg-ivory font-meta text-[11px] uppercase divide-y-2 divide-charcoal">
                                 <li className="p-2 flex justify-between">
-                                    <span>OS_ENV</span> <span className="font-bold">FEDORA / CACHYOS</span>
+                                    <span>OS_ENV</span>{" "}
+                                    <span className="font-bold">
+                                        FEDORA / CACHYOS
+                                    </span>
                                 </li>
                                 <li className="p-2 flex justify-between">
-                                    <span>EDITOR</span> <span className="font-bold">NEOVIM</span>
+                                    <span>EDITOR</span>{" "}
+                                    <span className="font-bold">NEOVIM</span>
                                 </li>
                                 <li className="p-2 flex justify-between text-accent-red font-bold">
-                                    <span>STATUS</span> <span className="animate-blink">● LOOKING FOR WORK</span>
+                                    <span>STATUS</span>{" "}
+                                    <span className="animate-blink">
+                                        ● LOOKING FOR WORK
+                                    </span>
                                 </li>
                             </ul>
                         </div>
@@ -545,7 +733,8 @@ export default function Home() {
                                 </svg>
 
                                 {/* Middle Text */}
-                                <span className="
+                                <span
+                                    className="
                                     font-display 
                                     max-[700px]:text-lg max-[1150px]:text-3xl max-[1400px]:text-7xl max-[1750px]:text-8xl min-[1750px]:text-9xl 
                                     tracking-widest uppercase text-ivory font-black whitespace-nowrap
@@ -595,7 +784,8 @@ export default function Home() {
                                 </svg>
 
                                 {/* Middle Text */}
-                                <span className="
+                                <span
+                                    className="
                                     font-display 
                                     max-[700px]:text-lg max-[1150px]:text-3xl max-[1400px]:text-7xl max-[1750px]:text-8xl min-[1750px]:text-9xl 
                                     tracking-widest uppercase text-ivory font-black whitespace-nowrap
@@ -627,7 +817,9 @@ export default function Home() {
                         </div>
                         <div className="hidden sm:block font-meta text-right">
                             <div className="text-3xl font-bold">04</div>
-                            <div className="text-xs uppercase">Items Indexed</div>
+                            <div className="text-xs uppercase">
+                                Items Indexed
+                            </div>
                         </div>
                     </div>
 
@@ -654,8 +846,15 @@ export default function Home() {
                             </div>
                             <div className="mt-3 flex justify-between items-start font-meta uppercase">
                                 <div>
-                                    <h3 className="font-bold text-2xl md:text-lg leading-tight">BetterIliganCity.org</h3>
-                                    <p className="text-sm md:text-xs text-gray-600 mt-1 scramble-text">a volunteer-led civic tech initiative to digitalize and streamline access to local governance, policies, and open data for Iligan City</p>
+                                    <h3 className="font-bold text-2xl md:text-lg leading-tight">
+                                        BetterIliganCity.org
+                                    </h3>
+                                    <p className="text-sm md:text-xs text-gray-600 mt-1 scramble-text">
+                                        a volunteer-led civic tech initiative to
+                                        digitalize and streamline access to
+                                        local governance, policies, and open
+                                        data for Iligan City
+                                    </p>
                                 </div>
                                 <div className="w-8 h-8 rounded-full border-system flex items-center justify-center transform -rotate-45 group-hover:bg-accent-red group-hover:text-ivory transition-colors">
                                     →
@@ -684,8 +883,15 @@ export default function Home() {
                             </div>
                             <div className="mt-3 flex justify-between items-start font-meta uppercase">
                                 <div>
-                                    <h3 className="font-bold text-2xl md:text-lg leading-tight">CitiFIX BetterIliganCity</h3>
-                                    <p className="text-sm md:text-xs text-gray-600 mt-1 scramble-text">A civic reporting platform for Iligan City that enables citizens to report infrastructure issues, view them on a map, and track resolution progress.</p>
+                                    <h3 className="font-bold text-2xl md:text-lg leading-tight">
+                                        CitiFIX BetterIliganCity
+                                    </h3>
+                                    <p className="text-sm md:text-xs text-gray-600 mt-1 scramble-text">
+                                        A civic reporting platform for Iligan
+                                        City that enables citizens to report
+                                        infrastructure issues, view them on a
+                                        map, and track resolution progress.
+                                    </p>
                                 </div>
                                 <div className="w-8 h-8 rounded-full border-system flex items-center justify-center transform -rotate-45 group-hover:bg-accent-red group-hover:text-ivory transition-colors">
                                     →
@@ -714,8 +920,14 @@ export default function Home() {
                             </div>
                             <div className="mt-3 flex justify-between items-start font-meta uppercase">
                                 <div>
-                                    <h3 className="font-bold text-2xl md:text-lg leading-tight">Budget Buddy</h3>
-                                    <p className="text-sm md:text-xs text-gray-600 mt-1 scramble-text">A budget expense tracker, budgeting, and price checking to enhance the livelihood and habits of the Iligan city people</p>
+                                    <h3 className="font-bold text-2xl md:text-lg leading-tight">
+                                        Budget Buddy
+                                    </h3>
+                                    <p className="text-sm md:text-xs text-gray-600 mt-1 scramble-text">
+                                        A budget expense tracker, budgeting, and
+                                        price checking to enhance the livelihood
+                                        and habits of the Iligan city people
+                                    </p>
                                 </div>
                                 <div className="w-8 h-8 rounded-full border-system flex items-center justify-center transform -rotate-45 group-hover:bg-accent-red group-hover:text-ivory transition-colors">
                                     →
@@ -729,7 +941,11 @@ export default function Home() {
                             className="scroll-mt-40 target:ring-4 target:ring-blue-500 target:bg-blue-50 md:col-span-4 flex items-center justify-center border-system bg-ivory p-8 shadow-solid reveal-up delay-100"
                         >
                             <div className="font-display text-3xl uppercase text-center flex flex-col gap-4">
-                                <svg className="w-12 h-12 rotate-45 mx-auto animate-spin-slow text-accent-mustard" viewBox="0 0 24 24" fill="currentColor">
+                                <svg
+                                    className="w-12 h-12 rotate-45 mx-auto animate-spin-slow text-accent-mustard"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
                                     <path d="M12 0C12 6.62742 6.62742 12 0 12C6.62742 12 12 17.3726 12 24C12 17.3726 17.3726 12 24 12C17.3726 12 12 6.62742 12 0Z" />
                                 </svg>
                                 <span>
@@ -746,7 +962,10 @@ export default function Home() {
                 </section>
 
                 {/* Network Section */}
-                <section id="connect" className="scroll-mt-24 py-32 relative flex flex-col items-center justify-center bg-charcoal text-ivory border-system -mx-4 px-4 sm:-mx-8 sm:px-8 overflow-hidden crosshair-tl crosshair-br">
+                <section
+                    id="connect"
+                    className="scroll-mt-24 py-32 relative flex flex-col items-center justify-center bg-charcoal text-ivory border-system -mx-4 px-4 sm:-mx-8 sm:px-8 overflow-hidden crosshair-tl crosshair-br"
+                >
                     {/* Graphic Background elements */}
                     <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
                         <svg
@@ -756,7 +975,12 @@ export default function Home() {
                             stroke="currentColor"
                             strokeWidth="0.5"
                         >
-                            <circle cx="50" cy="50" r="40" strokeDasharray="2 4" />
+                            <circle
+                                cx="50"
+                                cy="50"
+                                r="40"
+                                strokeDasharray="2 4"
+                            />
                             <circle cx="50" cy="50" r="20" />
                             <line x1="0" y1="50" x2="100" y2="50" />
                             <line x1="50" y1="0" x2="50" y2="100" />
@@ -778,8 +1002,12 @@ export default function Home() {
                     </div>
 
                     {/* Corner decorative tags */}
-                    <div className="absolute bottom-4 left-4 font-meta text-[10px] text-gray-500">SEC: ZERO</div>
-                    <div className="absolute bottom-4 right-4 font-meta text-[10px] text-gray-500">AUTH: PENDING</div>
+                    <div className="absolute bottom-4 left-4 font-meta text-[10px] text-gray-500">
+                        SEC: ZERO
+                    </div>
+                    <div className="absolute bottom-4 right-4 font-meta text-[10px] text-gray-500">
+                        AUTH: PENDING
+                    </div>
                 </section>
 
                 {/* Contact & Comms Section */}
@@ -801,9 +1029,15 @@ export default function Home() {
                             </h2>
                         </div>
                         <div className="mt-4 md:mt-0 font-meta text-left md:text-right">
-                            <div className="text-3xl font-bold text-accent-red">03</div>
-                            <div className="text-xs uppercase text-gray-600">Active Relays</div>
-                            <div className="text-[10px] text-gray-500 uppercase mt-1">STATUS: OPEN FOR DISPATCH</div>
+                            <div className="text-3xl font-bold text-accent-red">
+                                03
+                            </div>
+                            <div className="text-xs uppercase text-gray-600">
+                                Active Relays
+                            </div>
+                            <div className="text-[10px] text-gray-500 uppercase mt-1">
+                                STATUS: OPEN FOR DISPATCH
+                            </div>
                         </div>
                     </div>
 
@@ -820,29 +1054,47 @@ export default function Home() {
                                         Signal Coordinates
                                     </h3>
                                     <p className="text-xs text-gray-700 leading-relaxed scramble-text">
-                                        Direct transmission relays and social coordinates for software engineering inquiries, civic tech collaboration, open-source initiatives, and architecture consultancy.
+                                        Direct transmission relays and social
+                                        coordinates for software engineering
+                                        inquiries, civic tech collaboration,
+                                        open-source initiatives, and
+                                        architecture consultancy.
                                     </p>
                                 </div>
 
                                 <div className="border-system bg-white p-4 flex flex-col gap-2.5 text-xs text-charcoal shadow-solid">
                                     <div className="flex justify-between items-center border-b border-gray-200 pb-1.5">
-                                        <span className="text-gray-500 font-bold">RESPONSE RATE:</span>
-                                        <span className="font-bold text-accent-red">&lt; 24 HOURS</span>
+                                        <span className="text-gray-500 font-bold">
+                                            RESPONSE RATE:
+                                        </span>
+                                        <span className="font-bold text-accent-red">
+                                            &lt; 24 HOURS
+                                        </span>
                                     </div>
                                     <div className="flex justify-between items-center border-b border-gray-200 pb-1.5">
-                                        <span className="text-gray-500 font-bold">AVAILABILITY:</span>
-                                        <span className="font-bold text-green-700">ACTIVE // OPEN FOR WORK</span>
+                                        <span className="text-gray-500 font-bold">
+                                            AVAILABILITY:
+                                        </span>
+                                        <span className="font-bold text-green-700">
+                                            ACTIVE // OPEN FOR WORK
+                                        </span>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <span className="text-gray-500 font-bold">PREFERRED COMMS:</span>
-                                        <span className="font-bold">EMAIL / LINKEDIN / FACEBOOK</span>
+                                        <span className="text-gray-500 font-bold">
+                                            PREFERRED COMMS:
+                                        </span>
+                                        <span className="font-bold">
+                                            EMAIL / LINKEDIN / FACEBOOK
+                                        </span>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Micro Badge */}
                             <div className="hidden lg:flex items-center gap-3 border-2 border-dashed border-charcoal/40 p-3 bg-cream/60 text-[11px] font-meta text-gray-600 uppercase">
-                                <span className="text-accent-red font-bold text-base">✦</span>
+                                <span className="text-accent-red font-bold text-base">
+                                    ✦
+                                </span>
                                 <span>SECURE DISPATCH ENCRYPTED ON-DEMAND</span>
                             </div>
                         </div>
@@ -942,11 +1194,13 @@ export default function Home() {
                                     <div className="flex items-center gap-2">
                                         <span className="w-2.5 h-2.5 bg-accent-red rounded-full animate-blink" />
                                         <span className="font-bold text-xs uppercase tracking-wider text-charcoal">
-                                            DIRECT DISPATCH // SEC_ROUTE: ELECTRONIC MAIL
+                                            DIRECT DISPATCH // SEC_ROUTE:
+                                            ELECTRONIC MAIL
                                         </span>
                                     </div>
                                     <span className="text-[10px] text-gray-600 uppercase">
-                                        HOVER TO DECRYPT // CLICK TO COPY & DISPATCH
+                                        HOVER TO DECRYPT // CLICK TO COPY &
+                                        DISPATCH
                                     </span>
                                 </div>
 
@@ -955,7 +1209,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-            </main >
+            </main>
 
             <footer className="border-t-system bg-cream px-4 sm:px-8 py-8 md:py-12 mt-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 font-meta text-sm uppercase">
@@ -963,32 +1217,53 @@ export default function Home() {
                     <div className="col-span-1 md:col-span-2 flex flex-col justify-between">
                         <div>
                             <span className="font-display text-4xl tracking-tighter">
-                                C/H/R/I/S/C/E/N/T<span className="text-accent-red">✧</span>
+                                C/H/R/I/S/C/E/N/T
+                                <span className="text-accent-red">✧</span>
                             </span>
                             <p className="mt-2 text-xs text-gray-600 max-w-xs scramble-text">
-                                An experimental visual design system heavily inspired by urban editorial, motion graphics, and print media paradigms.
+                                An experimental visual design system heavily
+                                inspired by urban editorial, motion graphics,
+                                and print media paradigms.
                             </p>
                         </div>
-                        <div className="mt-8">&copy; 2024 / PROTOCOL ACTIVE</div>
+                        <div className="mt-8">
+                            &copy; 2024 / PROTOCOL ACTIVE
+                        </div>
                     </div>
 
                     {/* Links */}
                     <div className="flex flex-col gap-2">
-                        <p className="font-bold border-b-system pb-1 mb-2">Index</p>
-                        <a href="#overview" className="hover:text-accent-red transition-colors flex justify-between">
-                            <span>Overview</span> <span className="text-gray-400">01</span>
+                        <p className="font-bold border-b-system pb-1 mb-2">
+                            Index
+                        </p>
+                        <a
+                            href="#overview"
+                            className="hover:text-accent-red transition-colors flex justify-between"
+                        >
+                            <span>Overview</span>{" "}
+                            <span className="text-gray-400">01</span>
                         </a>
-                        <a href="#database" className="hover:text-accent-red transition-colors flex justify-between">
-                            <span>Database</span> <span className="text-gray-400">02</span>
+                        <a
+                            href="#database"
+                            className="hover:text-accent-red transition-colors flex justify-between"
+                        >
+                            <span>Database</span>{" "}
+                            <span className="text-gray-400">02</span>
                         </a>
-                        <a href="#contact" className="hover:text-accent-red transition-colors flex justify-between">
-                            <span>Transmissions</span> <span className="text-gray-400">03</span>
+                        <a
+                            href="#contact"
+                            className="hover:text-accent-red transition-colors flex justify-between"
+                        >
+                            <span>Transmissions</span>{" "}
+                            <span className="text-gray-400">03</span>
                         </a>
                     </div>
 
                     {/* Social/Contact */}
                     <div className="flex flex-col gap-2">
-                        <p className="font-bold border-b-system pb-1 mb-2">Comms</p>
+                        <p className="font-bold border-b-system pb-1 mb-2">
+                            Comms
+                        </p>
                         <Link
                             href="https://www.linkedin.com/in/chriscent-louis-june-pingol"
                             target="_blank"

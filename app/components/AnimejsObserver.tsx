@@ -28,12 +28,12 @@ export function AnimejsObserver() {
                 root: null,
                 rootMargin: "0px",
                 threshold: 0.15,
-            }
+            },
         );
 
         const observeElements = () => {
             const elements = document.querySelectorAll(
-                ".scramble-text:not([data-scrambled])"
+                ".scramble-text:not([data-scrambled])",
             );
 
             elements.forEach((el) => {

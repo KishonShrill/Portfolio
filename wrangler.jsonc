@@ -3,33 +3,31 @@
     "main": "vinext/server/fetch-handler",
     "name": "portfolio",
     "compatibility_date": "2026-10-06",
-    "compatibility_flags": [
-        "nodejs_compat"
-    ],
+    "compatibility_flags": ["nodejs_compat"],
     "assets": {
         "directory": "dist/client",
         "not_found_handling": "none",
-        "binding": "ASSETS"
+        "binding": "ASSETS",
     },
     "cache": {
-        "enabled": true
+        "enabled": true,
     },
     "services": [
         {
             "binding": "WORKER_SELF_REFERENCE",
-            "service": "betteriligan"
-        }
+            "service": "betteriligan",
+        },
     ],
     "images": {
-        "binding": "IMAGES"
+        "binding": "IMAGES",
     },
     "observability": {
-        "enabled": true
+        "enabled": true,
     },
     "vars": {},
     "kv_namespaces": [
         {
-            "binding": "PORTFOLIO_KV_CACHE"
-        }
-    ]
+            "binding": "PORTFOLIO_KV_CACHE",
+        },
+    ],
 }

@@ -67,7 +67,10 @@ export function ReachOutButton() {
 
     useEffect(() => {
         return () => {
-            if (animRef.current && typeof animRef.current.pause === "function") {
+            if (
+                animRef.current &&
+                typeof animRef.current.pause === "function"
+            ) {
                 animRef.current.pause();
             }
         };
@@ -91,12 +94,13 @@ export function ReachOutButton() {
                 <div className="flex items-center gap-3 pl-2 truncate">
                     {/* Status Signal Dot */}
                     <span
-                        className={`w-2.5 h-2.5 rounded-full shrink-0 transition-colors ${copied
-                            ? "bg-green-400 animate-ping"
-                            : isHovered
-                                ? "bg-accent-mustard animate-blink"
-                                : "bg-accent-red"
-                            }`}
+                        className={`w-2.5 h-2.5 rounded-full shrink-0 transition-colors ${
+                            copied
+                                ? "bg-green-400 animate-ping"
+                                : isHovered
+                                  ? "bg-accent-mustard animate-blink"
+                                  : "bg-accent-red"
+                        }`}
                     />
 
                     {/* Scramble Target Container */}
