@@ -2,9 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-    title: "PROJECT: C/L/J/P — VISUAL SYSTEM",
+    metadataBase: new URL("https://chriscent.is-a.dev"),
+    title: "Chriscent's Web Portfolio | KishonShrill (Github)",
     description:
         "An experimental visual design system heavily inspired by urban editorial, motion graphics, and print media paradigms.",
+    openGraph: {
+        siteName: "Chriscent Louis June Pingol",
+        locale: "en_PH",
+        type: "website",
+        url: "https://chriscent.is-a.dev",
+    },
+    twitter: {
+        card: "summary_large_image",
+    },
 };
 
 export default function RootLayout({
